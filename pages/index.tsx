@@ -13,5 +13,10 @@ export default () => (
         <a>b</a>
       </Link>
     </li>
+    <li>
+      <Link href="/posts/10000" as="/posts/10000">
+        <a>posts</a>
+      </Link>
+    </li>
   </ul>
 )
