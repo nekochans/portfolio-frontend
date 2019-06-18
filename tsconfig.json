@@ -19,5 +19,12 @@
     "preserveConstEnums": true,
     "sourceMap": true
   },
-  "exclude": ["dist", ".next", "out", "next.config.js"]
+  "exclude": [
+    "dist",
+    ".next",
+    "out",
+    "next.config.js",
+    ".eslintrc.js",
+    ".stylelintrc.js"
+  ]
 }
