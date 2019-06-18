@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { NextContext } from 'next';
 
 interface Props {
-  postId: any;
+  postId: string;
 }
 
 export default class extends Component<Props> {
-  static getInitialProps({ query: { id } }: any) {
+  static getInitialProps({ query: { id } }: NextContext) {
     return { postId: id };
   }
 
