@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-type Props = {
+interface Props {
   postId: any;
-};
+}
 
 export default class extends Component<Props> {
-  static getInitialProps ({ query: { id } }: any) {
-    return { postId: id }
+  static getInitialProps({ query: { id } }: any) {
+    return { postId: id };
   }
 
-  render () {
+  render() {
     return (
       <div>
         <h1>My blog post #{this.props.postId}</h1>
@@ -18,6 +18,6 @@ export default class extends Component<Props> {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-    )
+    );
   }
 }
