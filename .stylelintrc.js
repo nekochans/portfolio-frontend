@@ -5,8 +5,7 @@ module.exports = {
     './node_modules/prettier-stylelint/config.js'
   ],
   ignoreFiles: [
-    '**/node_modules/**',
-    'src/styles/**'
+    '**/node_modules/**'
   ],
   rules: {
     'indentation': 2,
