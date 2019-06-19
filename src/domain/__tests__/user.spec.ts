@@ -1,4 +1,4 @@
-import fetchUser from './user';
+import fetchUser from '../user';
 
 describe('User', () => {
   it('should be able to fetch a user', () => {
