@@ -4,7 +4,7 @@ describe('Members', () => {
   it('should be able to fetch Members', () => {
     const expected = [
       { githubUserName: 'keitakn' },
-      { githubUserName: 'kobayashi-m42' }
+      { githubUserName: 'kobayashi-m42' },
     ];
 
     expect(fetchMembers()).toStrictEqual(expected);

@@ -7,7 +7,7 @@ describe('HeaderImage', () => {
     const wrapper = shallow(<HeaderImage />);
 
     expect(wrapper.text()).toEqual(
-      'nekochansnekochans is GitHub Organization.Developing Web services and OSS.https://github.com/nekochans',
+      'nekochansWe are a Freelance Web Engineer Organization.https://github.com/nekochans',
     );
   });
 });

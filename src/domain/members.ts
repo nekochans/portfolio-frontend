@@ -3,10 +3,7 @@ interface Member {
 }
 
 const fetchMembers = (): Member[] => {
-  return [
-    { githubUserName: 'keitakn' },
-    { githubUserName: 'kobayashi-m42' }
-  ];
+  return [{ githubUserName: 'keitakn' }, { githubUserName: 'kobayashi-m42' }];
 };
 
 export default fetchMembers;
