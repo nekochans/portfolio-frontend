@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import HeaderImage from '../components/HeaderImage';
 import HeaderToolbar from '../components/HeaderToolbar';
 import { headerToolbarProps } from '../constants/props';
+import MembersCardList from '../components/MembersCardList';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -31,6 +32,7 @@ const IndexPage: React.FC = () => {
       </Grid>
       <HeaderToolbar {...headerToolbarProps()} />
       <HeaderImage />
+      <MembersCardList />
     </div>
   );
 };
