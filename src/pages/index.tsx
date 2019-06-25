@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import HeaderImage from '../components/HeaderImage';
 import HeaderToolbar from '../components/HeaderToolbar';
+import { headerToolbarProps } from '../constants/props';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,13 +21,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const IndexPage: React.FC = () => {
   const classes = useStyles();
-  const headerToolbarProps = {
-    sections: [
-      { displayName: 'WebService', url: '#' },
-      { displayName: 'OSS', url: '#' },
-      { displayName: 'Contact', url: '#' },
-    ],
-  };
 
   return (
     <div className={classes.root}>
@@ -35,7 +29,7 @@ const IndexPage: React.FC = () => {
           <Paper className={classes.paper}>nekochans</Paper>
         </Grid>
       </Grid>
-      <HeaderToolbar {...headerToolbarProps} />
+      <HeaderToolbar {...headerToolbarProps()} />
       <HeaderImage />
     </div>
   );
