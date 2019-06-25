@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(http://127.0.0.1:3000/static/cat2-min.jpeg)',
+    backgroundImage: 'url(/static/cat2-min.jpeg)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -52,8 +52,7 @@ const HeaderImage = () => {
               nekochans
             </Typography>
             <Typography variant="h4" color="inherit" paragraph>
-              <p>nekochans is GitHub Organization.</p>
-              <p>Developing Web services and OSS.</p>
+              We are a Freelance Web Engineer Organization.
             </Typography>
             <Link variant="subtitle1" href="https://github.com/nekochans">
               https://github.com/nekochans
