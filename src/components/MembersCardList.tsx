@@ -8,7 +8,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
   mainGrid: {
@@ -69,9 +68,9 @@ const MembersCardList = () => {
                     <Typography component="h2" variant="h5">
                       {member.githubUserName}
                     </Typography>
-                    <Link variant="subtitle1" href={member.cvUrl}>
+                    <Typography variant="subtitle1" color="primary">
                       {member.cvUrl}
-                    </Link>
+                    </Typography>
                   </CardContent>
                 </div>
                 <Hidden xsDown>
