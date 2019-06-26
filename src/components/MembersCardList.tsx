@@ -20,8 +20,8 @@ const useStyles = makeStyles(theme => ({
     flex: 1,
   },
   cardMedia: {
-    width: 160,
-    height: 160,
+    width: 140,
+    height: 140,
   },
   paper: {
     padding: theme.spacing(2),
@@ -73,7 +73,7 @@ const MembersCardList = () => {
                     </Typography>
                   </CardContent>
                 </div>
-                <Hidden xsDown>
+                <Hidden>
                   <CardMedia
                     className={classes.cardMedia}
                     image={member.githubPicture}
