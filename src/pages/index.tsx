@@ -6,6 +6,7 @@ import HeaderImage from '../components/HeaderImage';
 import HeaderToolbar from '../components/HeaderToolbar';
 import { headerToolbarProps } from '../constants/props';
 import MembersCardList from '../components/MembersCardList';
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -33,6 +34,7 @@ const IndexPage: React.FC = () => {
       <HeaderToolbar {...headerToolbarProps()} />
       <HeaderImage />
       <MembersCardList />
+      <Footer />
     </div>
   );
 };
