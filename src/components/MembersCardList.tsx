@@ -60,7 +60,7 @@ const MembersCardList = () => {
           <Grid item key={member.githubUserName} xs={12} md={6}>
             <CardActionArea
               component="a"
-              href={`https://github.com/${member.githubUserName}`}
+              href={member.cvUrl}
             >
               <Card className={classes.card}>
                 <div className={classes.cardDetails}>
@@ -68,16 +68,13 @@ const MembersCardList = () => {
                     <Typography component="h2" variant="h5">
                       {member.githubUserName}
                     </Typography>
-                    <Typography variant="subtitle1" color="primary">
-                      {member.cvUrl}
-                    </Typography>
                   </CardContent>
                 </div>
                 <Hidden>
                   <CardMedia
                     className={classes.cardMedia}
                     image={member.githubPicture}
-                    title="Image title"
+                    title={member.githubUserName}
                   />
                 </Hidden>
               </Card>
