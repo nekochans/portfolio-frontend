@@ -1,8 +1,10 @@
-import fetchMembers from '../members';
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import MembersCardList from './MembersCardList';
 
-describe('Members', () => {
-  it('should be able to fetch Members', () => {
-    const expected = [
+storiesOf('MembersCardList', module).add('show MembersCardList', () => {
+  const props = {
+    members: [
       {
         githubUserName: 'keitakn',
         githubPicture:
@@ -15,8 +17,8 @@ describe('Members', () => {
           'https://avatars0.githubusercontent.com/u/32682645?s=460&v=4',
         cvUrl: 'https://github.com/kobayashi-m42/cv',
       },
-    ];
+    ],
+  };
 
-    expect(fetchMembers()).toStrictEqual(expected);
-  });
+  return <MembersCardList {...props} />;
 });

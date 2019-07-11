@@ -8,6 +8,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 import Paper from '@material-ui/core/Paper';
+import { Member } from '../domain/members';
+
+interface Props {
+  members: Member[];
+}
 
 const useStyles = makeStyles(theme => ({
   mainGrid: {
@@ -30,22 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const members = [
-  {
-    githubUserName: 'keitakn',
-    githubPicture:
-      'https://avatars1.githubusercontent.com/u/11032365?s=460&v=4',
-    cvUrl: 'https://github.com/keitakn/cv',
-  },
-  {
-    githubUserName: 'kobayashi-m42',
-    githubPicture:
-      'https://avatars0.githubusercontent.com/u/32682645?s=460&v=4',
-    cvUrl: 'https://github.com/kobayashi-m42/cv',
-  },
-];
-
-const MembersCardList = () => {
+const MembersCardList = ({ members }: Props) => {
   const classes = useStyles();
 
   return (
@@ -58,10 +48,7 @@ const MembersCardList = () => {
       <Grid container spacing={4} className={classes.mainGrid}>
         {members.map(member => (
           <Grid item key={member.githubUserName} xs={12} md={6}>
-            <CardActionArea
-              component="a"
-              href={member.cvUrl}
-            >
+            <CardActionArea component="a" href={member.cvUrl}>
               <Card className={classes.card}>
                 <div className={classes.cardDetails}>
                   <CardContent>
