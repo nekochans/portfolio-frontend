@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(/static/cat2-min.jpeg)',
+    backgroundImage: 'url(http://localhost:3000/static/cat2-min.jpeg)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
