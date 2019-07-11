@@ -7,6 +7,11 @@ import HeaderToolbar from '../components/HeaderToolbar';
 import { headerToolbarProps } from '../constants/props';
 import MembersCardList from '../components/MembersCardList';
 import Footer from '../components/Footer';
+import fetchMembers, { Member } from '../domain/members';
+
+interface Props {
+  members: Member[];
+}
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -21,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const IndexPage: React.FC = () => {
+const IndexPage = ({ members }: Props) => {
   const classes = useStyles();
 
   return (
@@ -33,10 +38,16 @@ const IndexPage: React.FC = () => {
       </Grid>
       <HeaderToolbar {...headerToolbarProps()} />
       <HeaderImage />
-      <MembersCardList />
+      <MembersCardList {...{ members }} />
       <Footer />
     </div>
   );
+};
+
+IndexPage.getInitialProps = async () => {
+  const members = fetchMembers();
+
+  return { members };
 };
 
 export default IndexPage;
