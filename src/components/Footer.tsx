@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Footer = () => {
-  const classes = useStyles();
+  const classes = useStyles({});
 
   return (
     <footer className={classes.footer}>
