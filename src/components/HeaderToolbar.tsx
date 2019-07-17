@@ -25,7 +25,7 @@ interface Props {
 }
 
 const HeaderToolbar = ({ sections }: Props) => {
-  const classes = useStyles();
+  const classes = useStyles({});
 
   return (
     <Toolbar

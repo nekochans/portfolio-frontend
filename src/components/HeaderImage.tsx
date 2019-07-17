@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const HeaderImage = () => {
-  const classes = useStyles();
+  const classes = useStyles({});
 
   return (
     <Paper className={classes.mainHeader}>

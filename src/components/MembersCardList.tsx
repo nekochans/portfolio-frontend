@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const MembersCardList = ({ members }: Props) => {
-  const classes = useStyles();
+  const classes = useStyles({});
 
   return (
     <>
