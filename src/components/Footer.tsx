@@ -1,21 +1,17 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-const useStyles = makeStyles(theme => ({
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing(8),
-    padding: theme.spacing(6, 0),
-  },
-}));
+const StyledFooter = styled.footer`
+  background-color: ${props => props.theme.palette.background.paper};
+  margin-top: ${props => props.theme.spacing(8)};
+  padding: ${props => props.theme.spacing(6, 0)};
+`;
 
 const Footer = () => {
-  const classes = useStyles({});
-
   return (
-    <footer className={classes.footer}>
+    <StyledFooter>
       <Container maxWidth="lg">
         <Typography
           variant="subtitle1"
@@ -26,7 +22,7 @@ const Footer = () => {
           Copyright (c) 2019 nekochans
         </Typography>
       </Container>
-    </footer>
+    </StyledFooter>
   );
 };
 
