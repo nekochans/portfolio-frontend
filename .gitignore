@@ -13,3 +13,6 @@ portfolio-frontend.iml
 
 # Code coverage output
 coverage
+
+# env file
+.envrc

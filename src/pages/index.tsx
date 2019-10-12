@@ -1,4 +1,5 @@
 import React from 'react';
+import getConfig from 'next/config';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -8,6 +9,9 @@ import { headerToolbarProps } from '../constants/props';
 import MembersCardList from '../components/MembersCardList';
 import Footer from '../components/Footer';
 import fetchMembers, { Member } from '../domain/members';
+import { PublicEnv } from '../constants/environment';
+
+const { publicRuntimeConfig } = getConfig();
 
 interface Props {
   members: Member[];
@@ -28,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const IndexPage = ({ members }: Props) => {
   const classes = useStyles({});
+  const publicEnv: PublicEnv = publicRuntimeConfig;
 
   return (
     <div className={classes.root}>
@@ -37,7 +42,7 @@ const IndexPage = ({ members }: Props) => {
         </Grid>
       </Grid>
       <HeaderToolbar {...headerToolbarProps()} />
-      <HeaderImage />
+      <HeaderImage {...publicEnv} />
       <MembersCardList {...{ members }} />
       <Footer />
     </div>

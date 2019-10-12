@@ -4,14 +4,15 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import { Theme } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles<Theme, Props>(theme => ({
   mainHeader: {
     position: 'relative',
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(http://localhost:3000/static/cat2-min.jpeg)',
+    backgroundImage: props => `url(${props.appUrl}/static/cat2-min.jpeg)`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -34,8 +35,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const HeaderImage = () => {
-  const classes = useStyles({});
+type Props = {
+  appUrl: string;
+};
+
+const HeaderImage = (props: Props) => {
+  const classes = useStyles(props);
 
   return (
     <Paper className={classes.mainHeader}>
