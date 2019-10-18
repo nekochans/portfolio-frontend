@@ -1,9 +1,21 @@
-//import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import store from '../../store';
 import memberModule from '../memberModule';
 
-describe('Members', () => {
-  it('should be able to fetch Members', () => {
+describe('memberModule', () => {
+  it('should be as expected when using postFetchMembersRequest', () => {
+    const mockStore = store();
+
+    mockStore.dispatch(memberModule.actions.postFetchMembersRequest());
+
+    const expected = {
+      member: { isLoading: true, members: {}, errorMessage: '' },
+    };
+
+    expect(mockStore.getState()).toStrictEqual(expected);
+  });
+
+  it('should be as expected when using fetchMembersSuccess', () => {
     const members = [
       {
         githubUserName: 'keitakn',
@@ -15,10 +27,10 @@ describe('Members', () => {
 
     const mockStore = store();
 
-    mockStore.dispatch(memberModule.actions.fetchMemberSuccess(members));
+    mockStore.dispatch(memberModule.actions.fetchMembersSuccess(members));
 
     const expected = {
-      member: { members }
+      member: { isLoading: false, members, errorMessage: '' },
     };
 
     expect(mockStore.getState()).toStrictEqual(expected);
