@@ -1,6 +1,6 @@
 import { createSlice } from 'redux-starter-kit';
 import { useSelector } from 'react-redux';
-import { Member } from '../domain/members';
+import { Member } from '../../domain/members';
 
 type MemberState = {
   isLoading: boolean;
