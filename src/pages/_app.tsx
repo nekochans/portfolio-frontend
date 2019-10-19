@@ -3,9 +3,17 @@ import App from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { Provider } from 'react-redux';
+import withRedux from 'next-redux-wrapper';
+import withReduxSaga from 'next-redux-saga';
+import setupStore, { ReduxStoreInstance } from '../redux/store';
 import theme from '../styles/theme';
 
-export default class extends App {
+type PropsWithStore = {
+  store: ReduxStoreInstance;
+};
+
+class PortfolioApp extends App<PropsWithStore> {
   componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -17,7 +25,7 @@ export default class extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, store } = this.props;
 
     return (
       <>
@@ -27,9 +35,13 @@ export default class extends App {
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Component {...pageProps} />
+          <Provider store={store}>
+            <Component {...pageProps} />
+          </Provider>
         </ThemeProvider>
       </>
     );
   }
 }
+
+export default withRedux(setupStore)(withReduxSaga(PortfolioApp));
