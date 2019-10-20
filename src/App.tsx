@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from './styles/theme';
-import IndexPage from './pages/IndexPage';
+import Home from './containers/Home';
 
 const App: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const App: React.FC = () => {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <IndexPage />
+        <Home />
       </ThemeProvider>
     </>
   );

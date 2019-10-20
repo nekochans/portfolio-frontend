@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const IndexPage = () => {
+const Home = () => {
   const classes = useStyles({});
   const publicEnv: PublicEnv = { appUrl: 'http://localhost:3000' };
   const members = fetchMembers();
@@ -43,4 +43,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default Home;
