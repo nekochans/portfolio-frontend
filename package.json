@@ -19,6 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "yarn test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.css'",
     "format": "eslint --fix --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint --fix 'src/**/*.css'",
