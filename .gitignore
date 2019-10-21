@@ -28,4 +28,5 @@ yarn-error.log*
 portfolio-frontend.iml
 
 # env file
+.env
 .envrc
