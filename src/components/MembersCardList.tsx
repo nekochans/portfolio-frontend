@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const MembersCardList = ({ members }: Props) => {
+const MembersCardList: React.FC<Props> = ({ members }: Props) => {
   const classes = useStyles({});
 
   return (

@@ -39,7 +39,7 @@ type Props = {
   appUrl: string;
 };
 
-const HeaderImage = (props: Props) => {
+const HeaderImage: React.FC<Props> = (props: Props) => {
   const classes = useStyles(props);
 
   return (

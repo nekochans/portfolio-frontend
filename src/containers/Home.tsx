@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const Home = () => {
+const Home: React.FC = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
