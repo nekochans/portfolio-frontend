@@ -1,4 +1,4 @@
-import { createSlice } from 'redux-starter-kit';
+import { createSlice, PayloadAction } from 'redux-starter-kit';
 import { useSelector } from 'react-redux';
 import { Member } from '../../domain/members';
 
@@ -14,7 +14,7 @@ export const initialState: MemberState = {
 };
 
 const memberModule = createSlice({
-  slice: 'member',
+  name: 'member',
   initialState,
   reducers: {
     postFetchMembersRequest: (state: MemberState) => {
@@ -26,7 +26,7 @@ const memberModule = createSlice({
     },
     fetchMembersSuccess: (
       state: MemberState,
-      action: { payload: Member[] },
+      action: PayloadAction<Member[]>,
     ) => {
       return Object.assign(state, {
         members: action.payload,
@@ -38,7 +38,7 @@ const memberModule = createSlice({
 });
 
 export const useMembers = () => {
-  return useSelector((state: ReturnType<typeof memberModule.reducer>) => state);
+  return useSelector((state: { member: MemberState }) => state);
 };
 
 export default memberModule;

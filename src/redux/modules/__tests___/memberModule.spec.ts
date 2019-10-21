@@ -1,10 +1,9 @@
-// import { useDispatch } from 'react-redux';
-import store from '../../store';
+import createStore from '../../createStore';
 import memberModule from '../memberModule';
 
 describe('memberModule', () => {
   it('should be as expected when using postFetchMembersRequest', () => {
-    const mockStore = store();
+    const mockStore = createStore();
 
     mockStore.dispatch(memberModule.actions.postFetchMembersRequest());
 
@@ -25,7 +24,7 @@ describe('memberModule', () => {
       },
     ];
 
-    const mockStore = store();
+    const mockStore = createStore();
 
     mockStore.dispatch(memberModule.actions.fetchMembersSuccess(members));
 

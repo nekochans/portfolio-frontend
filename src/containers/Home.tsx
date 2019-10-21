@@ -1,23 +1,15 @@
-import React from 'react';
-import getConfig from 'next/config';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { NextPageContext } from 'next';
 import HeaderImage from '../components/HeaderImage';
 import HeaderToolbar from '../components/HeaderToolbar';
 import { headerToolbarProps } from '../constants/props';
 import MembersCardList from '../components/MembersCardList';
 import Footer from '../components/Footer';
-import fetchMembers, { Member } from '../domain/members';
 import { PublicEnv } from '../constants/environment';
-import memberModule from '../redux/modules/memberModule';
-
-const { publicRuntimeConfig } = getConfig();
-
-interface Props {
-  members: Member[];
-}
+import memberModule, { useMembers } from '../redux/modules/memberModule';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -32,9 +24,18 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const IndexPage = ({ members }: Props) => {
+const Home: React.FC = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(memberModule.actions.postFetchMembersRequest());
+  }, [dispatch]);
+
   const classes = useStyles({});
-  const publicEnv: PublicEnv = publicRuntimeConfig;
+
+  // TODO 環境変数から取得するように改修を行う
+  const publicEnv: PublicEnv = { appUrl: 'http://localhost:3000' };
+  const memberState = useMembers().member;
 
   return (
     <div className={classes.root}>
@@ -45,18 +46,14 @@ const IndexPage = ({ members }: Props) => {
       </Grid>
       <HeaderToolbar {...headerToolbarProps()} />
       <HeaderImage {...publicEnv} />
-      <MembersCardList {...{ members }} />
+      {memberState.members instanceof Array ? (
+        <MembersCardList {...{ members: memberState.members }} />
+      ) : (
+        ''
+      )}
       <Footer />
     </div>
   );
 };
 
-IndexPage.getInitialProps = async (ctx: NextPageContext) => {
-  const members = fetchMembers();
-
-  ctx.store.dispatch(memberModule.actions.postFetchMembersRequest());
-
-  return { members };
-};
-
-export default IndexPage;
+export default Home;

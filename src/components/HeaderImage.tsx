@@ -12,7 +12,7 @@ const useStyles = makeStyles<Theme, Props>(theme => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: props => `url(${props.appUrl}/static/cat2-min.jpeg)`,
+    backgroundImage: props => `url(${props.appUrl}/cat2-min.jpeg)`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -39,7 +39,7 @@ type Props = {
   appUrl: string;
 };
 
-const HeaderImage = (props: Props) => {
+const HeaderImage: React.FC<Props> = (props: Props) => {
   const classes = useStyles(props);
 
   return (

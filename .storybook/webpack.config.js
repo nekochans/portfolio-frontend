@@ -1,23 +1,22 @@
 const path = require('path');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
+const SRC_PATH = path.join(__dirname, '../src');
 
 module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    loader: require.resolve('babel-loader'),
-    options: {
-      presets: [require.resolve('babel-preset-react-app')],
-    },
+    include: [SRC_PATH],
+    use: [
+      {
+        loader: require.resolve('babel-loader'),
+        options: {
+          presets: [['react-app', { flow: false, typescript: true }]],
+        },
+      },
+      { loader: require.resolve('react-docgen-typescript-loader') },
+    ],
   });
-
   config.resolve.extensions.push('.ts', '.tsx');
 
-  config.plugins.push(
-    new ForkTsCheckerWebpackPlugin({
-      async: false,
-      checkSyntacticErrors: true,
-      formatter: require('react-dev-utils/typescriptFormatter'),
-    })
-  );
   return config;
 };
