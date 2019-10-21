@@ -24,7 +24,7 @@ interface Props {
   sections: { displayName: string; url: string }[];
 }
 
-const HeaderToolbar = ({ sections }: Props) => {
+const HeaderToolbar: React.FC<Props> = ({ sections }: Props) => {
   const classes = useStyles({});
 
   return (
