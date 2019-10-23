@@ -8,6 +8,7 @@ import HeaderToolbar from '../components/HeaderToolbar';
 import { headerToolbarProps } from '../constants/props';
 import MembersCardList from '../components/MembersCardList';
 import Footer from '../components/Footer';
+import Loading from '../components/Loading';
 import { PublicEnv } from '../constants/environment';
 import memberModule, { useMembers } from '../redux/modules/memberModule';
 
@@ -46,6 +47,7 @@ const Home: React.FC = () => {
       </Grid>
       <HeaderToolbar {...headerToolbarProps()} />
       <HeaderImage {...publicEnv} />
+      {memberState.isLoading ? <Loading /> : ''}
       {memberState.members instanceof Array ? (
         <MembersCardList {...{ members: memberState.members }} />
       ) : (
