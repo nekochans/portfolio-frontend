@@ -7,4 +7,6 @@ addDecorator(withInfo);
 addDecorator(withKnobs);
 addDecorator(withA11y);
 
-configure(require.context('../src/components', true, /\.stories\.tsx$/), module);
+const req = require.context('../src/components', true, /\.stories\.tsx$/);
+
+configure(req, module);
