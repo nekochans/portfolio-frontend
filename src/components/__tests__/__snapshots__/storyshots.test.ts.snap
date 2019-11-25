@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Footer show Footer 1`] = `
+exports[`Storyshots Footer Show Footer 1`] = `
 Array [
   <div
     style={
@@ -50,7 +50,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots HeaderImage show HeaderImage 1`] = `
+exports[`Storyshots HeaderImage Show Header Image With Props 1`] = `
 Array [
   <div
     style={
@@ -124,7 +124,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots HeaderToolbar show HeaderToolbar 1`] = `
+exports[`Storyshots HeaderToolbar Show Header Toolbar With Props 1`] = `
 Array [
   <div
     style={
@@ -189,7 +189,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Loading show Loading 1`] = `
+exports[`Storyshots Loading Show Loading 1`] = `
 Array [
   <div
     style={
@@ -258,7 +258,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots MembersCardList show MembersCardList 1`] = `
+exports[`Storyshots MembersCardList Show Members Card List With Props 1`] = `
 Array [
   <div
     style={
