@@ -1,10 +1,12 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import HeaderImage from './HeaderImage';
 
-export const headerImageTestProps = { appUrl: 'http://localhost:3000' };
+export default {
+  title: 'HeaderImage',
+};
 
-/* istanbul ignore next */
-storiesOf('HeaderImage', module).add('show HeaderImage', () => {
-  return <HeaderImage {...headerImageTestProps} />;
-});
+const headerImageTestProps = { appUrl: 'http://localhost:3000' };
+
+export const showHeaderImageWithProps = () => (
+  <HeaderImage {...headerImageTestProps} />
+);
