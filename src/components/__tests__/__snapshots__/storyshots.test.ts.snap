@@ -19,7 +19,7 @@ Array [
         <p
           className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
         >
-          Copyright (c) 2019 nekochans
+          Copyright (c) 2018-2020 nekochans
         </p>
       </div>
     </footer>
@@ -36,7 +36,7 @@ Array [
         "cursor": "pointer",
         "display": "block",
         "fontFamily": "sans-serif",
-        "fontSize": "12px",
+        "fontSize": 12,
         "padding": "5px 15px",
         "position": "fixed",
         "right": 0,
@@ -61,7 +61,7 @@ Array [
     }
   >
     <div
-      className="MuiPaper-root MuiPaper-elevation1 makeStyles-mainHeader-40 makeStyles-mainHeader-43 MuiPaper-rounded"
+      className="MuiPaper-root makeStyles-mainHeader-40 makeStyles-mainHeader-43 MuiPaper-elevation1 MuiPaper-rounded"
     >
       <div
         className="makeStyles-overlay-41"
@@ -110,7 +110,7 @@ Array [
         "cursor": "pointer",
         "display": "block",
         "fontFamily": "sans-serif",
-        "fontSize": "12px",
+        "fontSize": 12,
         "padding": "5px 15px",
         "position": "fixed",
         "right": 0,
@@ -135,10 +135,10 @@ Array [
     }
   >
     <nav
-      className="MuiToolbar-root MuiToolbar-dense makeStyles-toolbarSecondary-212 MuiToolbar-gutters"
+      className="MuiToolbar-root MuiToolbar-dense makeStyles-toolbarSecondary-213 MuiToolbar-gutters"
     >
       <a
-        className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLink-213 MuiTypography-body2 MuiTypography-colorInherit MuiTypography-noWrap"
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLink-214 MuiTypography-body2 MuiTypography-colorInherit MuiTypography-noWrap"
         href="https://www.google.com"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -146,7 +146,7 @@ Array [
         Google
       </a>
       <a
-        className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLink-213 MuiTypography-body2 MuiTypography-colorInherit MuiTypography-noWrap"
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLink-214 MuiTypography-body2 MuiTypography-colorInherit MuiTypography-noWrap"
         href="https://qiita.com"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -154,7 +154,7 @@ Array [
         Qiita
       </a>
       <a
-        className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLink-213 MuiTypography-body2 MuiTypography-colorInherit MuiTypography-noWrap"
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLink-214 MuiTypography-body2 MuiTypography-colorInherit MuiTypography-noWrap"
         href="https://github.com"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -175,7 +175,7 @@ Array [
         "cursor": "pointer",
         "display": "block",
         "fontFamily": "sans-serif",
-        "fontSize": "12px",
+        "fontSize": 12,
         "padding": "5px 15px",
         "position": "fixed",
         "right": 0,
@@ -200,10 +200,10 @@ Array [
     }
   >
     <div
-      className="makeStyles-progress-255"
+      className="makeStyles-progress-256"
     >
       <div
-        className="MuiCircularProgress-root makeStyles-progressContent-254 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+        className="MuiCircularProgress-root makeStyles-progressContent-255 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
         role="progressbar"
         style={
           Object {
@@ -244,7 +244,7 @@ Array [
         "cursor": "pointer",
         "display": "block",
         "fontFamily": "sans-serif",
-        "fontSize": "12px",
+        "fontSize": 12,
         "padding": "5px 15px",
         "position": "fixed",
         "right": 0,
@@ -275,14 +275,14 @@ Array [
         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-272 MuiPaper-rounded"
+          className="MuiPaper-root makeStyles-paper-273 MuiPaper-elevation1 MuiPaper-rounded"
         >
           Members
         </div>
       </div>
     </div>
     <div
-      className="MuiGrid-root makeStyles-mainGrid-268 MuiGrid-container MuiGrid-spacing-xs-4"
+      className="MuiGrid-root makeStyles-mainGrid-269 MuiGrid-container MuiGrid-spacing-xs-4"
     >
       <div
         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
@@ -305,10 +305,10 @@ Array [
           tabIndex={0}
         >
           <div
-            className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-269 MuiPaper-rounded"
+            className="MuiPaper-root MuiCard-root makeStyles-card-270 MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
-              className="makeStyles-cardDetails-270"
+              className="makeStyles-cardDetails-271"
             >
               <div
                 className="MuiCardContent-root"
@@ -350,10 +350,10 @@ Array [
           tabIndex={0}
         >
           <div
-            className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-269 MuiPaper-rounded"
+            className="MuiPaper-root MuiCard-root makeStyles-card-270 MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
-              className="makeStyles-cardDetails-270"
+              className="makeStyles-cardDetails-271"
             >
               <div
                 className="MuiCardContent-root"
@@ -388,7 +388,7 @@ Array [
         "cursor": "pointer",
         "display": "block",
         "fontFamily": "sans-serif",
-        "fontSize": "12px",
+        "fontSize": 12,
         "padding": "5px 15px",
         "position": "fixed",
         "right": 0,

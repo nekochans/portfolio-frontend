@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           color="textSecondary"
           component="p"
         >
-          Copyright (c) 2019 nekochans
+          Copyright (c) 2018-2020 nekochans
         </Typography>
       </Container>
     </footer>
