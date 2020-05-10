@@ -25,6 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "yarn test --coverage --watchAll=false",
+    "test:ci": "CI=true node --max_old_space_size=1024 --trace-gc ./node_modules/react-scripts/bin/react-scripts.js test --env=jsdom --maxWorkers=2",
     "eject": "react-scripts eject",
     "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.css'",
     "format": "eslint --fix --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint --fix 'src/**/*.css'",
