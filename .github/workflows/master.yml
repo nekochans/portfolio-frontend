@@ -1,12 +1,9 @@
-name: develop
+name: master
 
 on:
-  push:
-    branches:
-      - develop
   pull_request:
     branches:
-      - develop
+      - master
 
 jobs:
   build:
@@ -30,10 +27,13 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
+    needs: build
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - run: npm install -g yarn
+      - run: yarn install
       - run: yarn run test:ci
