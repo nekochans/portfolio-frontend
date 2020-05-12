@@ -1,4 +1,6 @@
 # nekochans-portfolio
+![master](https://github.com/nekochans/portfolio-frontend/workflows/master/badge.svg)
+![develop](https://github.com/nekochans/portfolio-frontend/workflows/develop/badge.svg?branch=develop)
 [![Coverage Status](https://coveralls.io/repos/github/nekochans/portfolio-frontend/badge.svg?branch=master)](https://coveralls.io/github/nekochans/portfolio-frontend?branch=master)
 
 GitHub Organization 「nekochans」の説明用Webサイト
