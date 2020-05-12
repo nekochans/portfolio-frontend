@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build And Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,22 +18,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install -g yarn
-      - run: yarn install
-      - run: yarn run build
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
-    needs: build
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - run: |
+          npm install -g yarn
+          yarn install
+          yarn run build
+          yarn run test:ci
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install -g yarn
-      - run: yarn install
-      - run: yarn run test:ci
+          github-token: ${{ secrets.GITHUB_TOKEN }}
