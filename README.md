@@ -1,4 +1,6 @@
 # nekochans-portfolio
+[![Coverage Status](https://coveralls.io/repos/github/nekochans/portfolio-frontend/badge.svg?branch=master)](https://coveralls.io/github/nekochans/portfolio-frontend?branch=master)
+
 GitHub Organization 「nekochans」の説明用Webサイト
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
