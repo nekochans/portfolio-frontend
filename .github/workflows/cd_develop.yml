@@ -1,0 +1,38 @@
+name: cd_develop
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    name: Deploy To Staging
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          npm install -g yarn
+          yarn install
+          yarn run build
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-1
+      - name: Deploy To S3
+        env:
+          S3_DEPLOY_BUCKET: ${{ secrets.STG_S3_DEPLOY_BUCKET }}
+          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.STG_CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          aws s3 rm s3://$S3_DEPLOY_BUCKET --recursive
+          aws s3 sync ./build s3://$S3_DEPLOY_BUCKET
+          aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
