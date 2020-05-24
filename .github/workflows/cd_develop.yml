@@ -21,8 +21,7 @@ jobs:
       - run: |
           npm install -g yarn
           yarn install
-          yarn run createEnv:stg
-          yarn run build
+          yarn run build:stg
           rm -rf build/index.stg.html
           rm -rf build/index.prod.html
       - name: Configure AWS credentials
