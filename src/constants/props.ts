@@ -1,9 +1,9 @@
 export const headerToolbarProps = () => {
   return {
     sections: [
-      { displayName: 'WebService', url: '#' },
-      { displayName: 'OSS', url: '#' },
-      { displayName: 'Contact', url: '#' },
+      { displayName: 'WebService', url: '/' },
+      { displayName: 'OSS', url: '/' },
+      { displayName: 'Contact', url: '/' },
     ],
   };
 };

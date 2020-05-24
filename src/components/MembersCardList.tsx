@@ -14,7 +14,7 @@ interface Props {
   members: Member[];
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
   },
@@ -46,9 +46,14 @@ const MembersCardList: React.FC<Props> = ({ members }: Props) => {
         </Grid>
       </Grid>
       <Grid container spacing={4} className={classes.mainGrid}>
-        {members.map(member => (
+        {members.map((member) => (
           <Grid item key={member.githubUserName} xs={12} md={6}>
-            <CardActionArea component="a" href={member.cvUrl}>
+            <CardActionArea
+              component="a"
+              href={member.cvUrl}
+              target="_blank"
+              rel="noopener"
+            >
               <Card className={classes.card}>
                 <div className={classes.cardDetails}>
                   <CardContent>
