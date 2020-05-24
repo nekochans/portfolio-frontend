@@ -30,7 +30,10 @@
     "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.css'",
     "format": "eslint --fix --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint --fix 'src/**/*.css'",
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook -o build/storybook"
+    "build:storybook": "build-storybook -o build/storybook",
+    "createEnv:local": "cp .local.env .env",
+    "createEnv:stg": "cp .stg.env .env",
+    "createEnv:prod": "cp .prod.env .env"
   },
   "eslintConfig": {
     "extends": "react-app"
