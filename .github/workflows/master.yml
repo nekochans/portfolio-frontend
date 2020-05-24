@@ -22,6 +22,7 @@ jobs:
           npm install -g yarn
           yarn install
           yarn run build:prod
+          yarn run lint
           yarn run test:ci
       - name: Coveralls
         uses: coverallsapp/github-action@master
