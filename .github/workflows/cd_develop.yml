@@ -23,6 +23,8 @@ jobs:
           yarn install
           yarn run createEnv:stg
           yarn run build
+          rm -rf build/index.stg.html
+          rm -rf build/index.prod.html
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
