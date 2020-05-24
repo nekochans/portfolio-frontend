@@ -34,8 +34,7 @@ const Home: React.FC = () => {
 
   const classes = useStyles({});
 
-  // TODO 環境変数から取得するように改修を行う
-  const publicEnv: PublicEnv = { appUrl: 'http://localhost:3000' };
+  const publicEnv: PublicEnv = { appUrl: `${process.env.PUBLIC_URL}` };
   const memberState = useMembers().member;
 
   return (
