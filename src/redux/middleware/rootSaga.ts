@@ -3,7 +3,7 @@ import memberModule from '../modules/memberModule';
 import fetchMembers from '../../domain/members';
 
 const sleep = (microSecond: number) =>
-  new Promise(resolve => setTimeout(resolve, microSecond));
+  new Promise((resolve) => setTimeout(resolve, microSecond));
 
 function* postFetchMembersRequest() {
   const members = fetchMembers();

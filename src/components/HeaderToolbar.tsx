@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
@@ -33,7 +33,7 @@ const HeaderToolbar: React.FC<Props> = ({ sections }: Props) => {
       variant="dense"
       className={classes.toolbarSecondary}
     >
-      {sections.map(section => (
+      {sections.map((section) => (
         <Link
           color="inherit"
           noWrap

@@ -1,9 +1,6 @@
 import { Store, combineReducers } from 'redux';
 import logger from 'redux-logger';
-import {
-  configureStore,
-  getDefaultMiddleware,
-} from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import memberModule, { initialState } from './modules/memberModule';
 import rootSaga from './middleware/rootSaga';

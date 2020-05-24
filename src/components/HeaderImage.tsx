@@ -6,13 +6,13 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { Theme } from '@material-ui/core';
 
-const useStyles = makeStyles<Theme, Props>(theme => ({
+const useStyles = makeStyles<Theme, Props>((theme) => ({
   mainHeader: {
     position: 'relative',
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: props => `url(${props.appUrl}/cat2-min.jpeg)`,
+    backgroundImage: (props) => `url(${props.appUrl}/cat2-min.jpeg)`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
