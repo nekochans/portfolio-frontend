@@ -30,3 +30,6 @@ portfolio-frontend.iml
 # env file
 .env
 .envrc
+
+# public/index.html
+public/index.html
