@@ -1,0 +1,63 @@
+name: cd_prod
+
+on:
+  push:
+    tags:
+      - v[0-9].[0-9]+.[0-9]+
+
+jobs:
+  test:
+    name: Build And Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          npm install -g yarn
+          yarn install
+          yarn run build:prod
+          yarn run lint
+          yarn run test:ci
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+    name: Deploy To Production
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    needs: test
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          npm install -g yarn
+          yarn install
+          yarn run build:prod
+          rm -rf build/index.stg.html
+          rm -rf build/index.prod.html
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-1
+      - name: Deploy To S3
+        env:
+          S3_DEPLOY_BUCKET: ${{ secrets.PROD_S3_DEPLOY_BUCKET }}
+          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.PROD_CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          aws s3 rm s3://$S3_DEPLOY_BUCKET --recursive
+          aws s3 sync ./build s3://$S3_DEPLOY_BUCKET
+          aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
