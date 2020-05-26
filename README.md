@@ -1,7 +1,8 @@
 # nekochans-portfolio
-![master](https://github.com/nekochans/portfolio-frontend/workflows/master/badge.svg)
-![ci_develop](https://github.com/nekochans/portfolio-frontend/workflows/ci_develop/badge.svg?branch=develop)
-![cd_develop](https://github.com/nekochans/portfolio-frontend/workflows/cd_develop/badge.svg?branch=develop)
+![ci-develop](https://github.com/nekochans/portfolio-frontend/workflows/ci-develop/badge.svg)
+![cd-develop](https://github.com/nekochans/portfolio-frontend/workflows/cd-develop/badge.svg)
+![ci-master](https://github.com/nekochans/portfolio-frontend/workflows/ci-master/badge.svg)
+![cd-prod](https://github.com/nekochans/portfolio-frontend/workflows/cd-prod/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/nekochans/portfolio-frontend/badge.svg?branch=develop)](https://coveralls.io/github/nekochans/portfolio-frontend?branch=develop)
 
 GitHub Organization 「nekochans」の説明用Webサイト
