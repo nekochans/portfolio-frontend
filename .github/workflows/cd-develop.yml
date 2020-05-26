@@ -1,4 +1,4 @@
-name: cd_develop
+name: cd-develop
 
 on:
   push:
