@@ -6,12 +6,35 @@ on:
       - v[0-9].[0-9]+.[0-9]+
 
 jobs:
+  test:
+    name: Build And Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          npm install -g yarn
+          yarn install
+          yarn run build:prod
+          yarn run lint
+          yarn run test:ci
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   deploy:
     name: Deploy To Production
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
+    needs: test
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
