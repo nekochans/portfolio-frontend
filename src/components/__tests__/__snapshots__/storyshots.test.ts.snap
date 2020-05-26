@@ -302,7 +302,9 @@ Array [
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          rel="noopener"
           tabIndex={0}
+          target="_blank"
         >
           <div
             className="MuiPaper-root MuiCard-root makeStyles-card-270 MuiPaper-elevation1 MuiPaper-rounded"
@@ -347,7 +349,9 @@ Array [
           onTouchEnd={[Function]}
           onTouchMove={[Function]}
           onTouchStart={[Function]}
+          rel="noopener"
           tabIndex={0}
+          target="_blank"
         >
           <div
             className="MuiPaper-root MuiCard-root makeStyles-card-270 MuiPaper-elevation1 MuiPaper-rounded"
