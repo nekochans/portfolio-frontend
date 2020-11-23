@@ -40,7 +40,8 @@ type Props = {
 };
 
 const HeaderImage: React.FC<Props> = (props: Props) => {
-  const classes = useStyles(props);
+  const { appUrl } = props;
+  const classes = useStyles({ appUrl });
 
   return (
     <Paper className={classes.mainHeader}>
