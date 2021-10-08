@@ -1,4 +1,0 @@
-node_modules/
-cypress/plugins/
-cypress/integration/examples
-src/serviceWorker.ts
