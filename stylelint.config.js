@@ -1,6 +1,11 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
-  plugins: ['stylelint-order'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-recess-order',
+    'stylelint-prettier/recommended',
+    'stylelint-config-prettier',
+  ],
+  plugins: ['stylelint-prettier'],
   ignoreFiles: [
     '**/node_modules/**',
     '**/.next/**',
