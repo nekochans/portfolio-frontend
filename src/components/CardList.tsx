@@ -3,12 +3,14 @@ import Card from './Card';
 import styles from '../../styles/Home.module.css';
 
 type Props = {
-  items: {
-    id: number;
-    title: string;
-    url: string;
-    description: string;
-  }[];
+  items: CardListItem[];
+};
+
+export type CardListItem = {
+  id: number;
+  title: string;
+  url: string;
+  description: string;
 };
 
 const CardList: React.VFC<Props> = ({ items }) => (

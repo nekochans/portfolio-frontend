@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from '../../styles/Home.module.css';
 
-type Props = {
+type Props = CardItem;
+
+export type CardItem = {
   title: string;
   url: string;
   description: string;
