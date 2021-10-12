@@ -1,32 +1,12 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { fetchPublicRepos } from '../api/fetch/github';
-import { isSuccessResult } from '../domain/asyncResult';
 import styles from '../../styles/Home.module.css';
-import CardList, { CardListItem } from '../components/CardList';
+import CardList from '../components/CardList';
+import useFetchPublicRepos from '../hooks/useFetchPublicRepos';
 
 const GitHubRepositoryTemplate: React.VFC = () => {
-  const [items, setItems] = useState<CardListItem[]>();
-
-  useEffect(() => {
-    const fetchRepo = async () => {
-      const publicRepos = await fetchPublicRepos();
-      if (isSuccessResult(publicRepos)) {
-        const cardListItems = publicRepos.value.map((value) => ({
-          id: value.id,
-          title: value.name,
-          url: value.htmlUrl,
-          description: value.description,
-        }));
-
-        setItems(cardListItems);
-      }
-    };
-
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    fetchRepo();
-  }, []);
+  const publicReposRes = useFetchPublicRepos();
 
   return (
     <div className={styles.container}>
@@ -45,7 +25,11 @@ const GitHubRepositoryTemplate: React.VFC = () => {
           Get started by editing{' '}
           <code className={styles.code}>src/pages/repos.tsx</code>
         </p>
-        {items == null ? '' : <CardList items={items} />}
+        {publicReposRes.items == null ? (
+          ''
+        ) : (
+          <CardList items={publicReposRes.items} />
+        )}
       </main>
 
       <footer className={styles.footer}>
