@@ -1,3 +1,4 @@
+import React from 'react';
 import { NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -7,7 +8,7 @@ type Props = {
   nowDatetime: string;
 };
 
-const isrPage: NextPage<Props> = ({ nowDatetime }: Props) => (
+const IsrPage: NextPage<Props> = ({ nowDatetime }: Props) => (
   <div className={styles.container}>
     <Head>
       <title>Create Next App</title>
@@ -57,4 +58,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default isrPage;
+export default IsrPage;

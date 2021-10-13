@@ -1,6 +1,7 @@
+import React from 'react';
 import { NextPage } from 'next';
 import GitHubRepositoryTemplate from '../templates/GitHubRepositoryTemplate';
 
-const reposPage: NextPage = () => <GitHubRepositoryTemplate />;
+const ReposPage: NextPage = () => <GitHubRepositoryTemplate />;
 
-export default reposPage;
+export default ReposPage;
