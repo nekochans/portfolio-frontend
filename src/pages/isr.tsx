@@ -3,6 +3,8 @@ import { NextPage, GetStaticProps } from 'next';
 import Head from 'next/head';
 import styles from '../../styles/Home.module.css';
 import Footer from '../components/Footer';
+import Title from '../components/Title';
+import Description from '../components/Description';
 
 type Props = {
   nowDatetime: string;
@@ -17,10 +19,8 @@ const IsrPage: NextPage<Props> = ({ nowDatetime }: Props) => (
     </Head>
 
     <main className={styles.main}>
-      <h1 className={styles.title}>
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-
+      <Title />
+      <Description filename="src/pages/isr.tsx" />
       <p className={styles.description}>現在日時は {nowDatetime}</p>
     </main>
 

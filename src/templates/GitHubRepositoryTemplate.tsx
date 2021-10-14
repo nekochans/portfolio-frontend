@@ -4,6 +4,8 @@ import styles from '../../styles/Home.module.css';
 import CardList from '../components/CardList';
 import useFetchPublicRepos from '../hooks/useFetchPublicRepos';
 import Footer from '../components/Footer';
+import Title from '../components/Title';
+import Description from '../components/Description';
 
 const GitHubRepositoryTemplate: React.VFC = () => {
   const publicReposRes = useFetchPublicRepos();
@@ -17,14 +19,8 @@ const GitHubRepositoryTemplate: React.VFC = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>src/pages/repos.tsx</code>
-        </p>
+        <Title />
+        <Description filename="src/pages/repos.tsx" />
         {publicReposRes.items == null ? (
           ''
         ) : (

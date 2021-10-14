@@ -3,6 +3,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../../styles/Home.module.css';
 import Footer from '../components/Footer';
+import Title from '../components/Title';
+import Description from '../components/Description';
 
 const IndexPage: NextPage = () => (
   <div className={styles.container}>
@@ -13,14 +15,8 @@ const IndexPage: NextPage = () => (
     </Head>
 
     <main className={styles.main}>
-      <h1 className={styles.title}>
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-
-      <p className={styles.description}>
-        Get started by editing{' '}
-        <code className={styles.code}>pages/index.js</code>
-      </p>
+      <Title />
+      <Description filename="src/pages/index.tsx" />
 
       <div className={styles.grid}>
         <a href="https://nextjs.org/docs" className={styles.card}>
