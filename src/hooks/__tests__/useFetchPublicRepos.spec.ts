@@ -41,11 +41,9 @@ describe('useFetchPublicRepos TestCases', () => {
     await act(async () => {
       const renderHookResult = renderHook(() => useFetchPublicRepos());
 
-      await renderHookResult.waitForNextUpdate();
-
-      renderHookResult.rerender();
-
-      expect(renderHookResult.result.current).toStrictEqual(expected);
+      await renderHookResult.waitFor(() => {
+        expect(renderHookResult.result.current).toStrictEqual(expected);
+      });
     });
   });
 });
