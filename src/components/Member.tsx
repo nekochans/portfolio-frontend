@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 // TODO 定義が重複しているのでどこかで統一する
 type Props = {
@@ -11,7 +12,7 @@ const Member: React.VFC<Props> = ({ cvUrl, githubPicture, githubUserName }) => (
   <article className="item">
     <a href={cvUrl}>
       <figure>
-        <img
+        <Image
           src={githubPicture}
           alt={githubUserName}
           width="1000"
