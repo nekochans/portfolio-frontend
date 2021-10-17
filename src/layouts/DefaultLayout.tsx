@@ -5,7 +5,7 @@ import { MetaTag } from '../constants/metaTag';
 import Header from '../components/Header';
 import { appUrlPath } from '../constants/url';
 import Hero from '../components/Hero';
-import Footer from "../components/Footer";
+import Footer from '../components/Footer';
 
 type Props = {
   children: ReactNode;
