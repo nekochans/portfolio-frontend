@@ -1,9 +1,32 @@
-html,
+@charset "UTF-8";
+
+:root {
+  --v-space: clamp(20px, 2vw, 50px);
+}
+
 body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #222;
+  background-color: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+ul {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  list-style: none;
+}
+
+p {
+  line-height: 1.8;
 }
 
 a {
@@ -11,6 +34,236 @@ a {
   text-decoration: none;
 }
 
-* {
+a:hover {
+  filter: brightness(90%) contrast(120%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.w-container {
+  position: relative;
+  width: min(92%, 1166px);
+  margin: auto;
+}
+
+.header {
+  height: 112px;
+  background-color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.hero {
+  height: 650px;
+  background-image: url(http://localhost:2929/hero.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-container {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  height: 100%;
+}
+
+.hero h1 {
+  min-height: 0;
+  margin-bottom: 42px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(48px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.3;
+  color: #fff;
+  text-align: center;
+}
+
+.hero p {
+  margin-bottom: 72px;
+  color: white;
+}
+
+.btn {
   box-sizing: border-box;
+  display: block;
+  width: 260px;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 6px #00000052;
+  background-color: black;
+  border-radius: 4px;
+}
+
+.heading-decoration {
+  min-height: 0;
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 400;
+}
+
+.heading-decoration + p {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #707070;
+}
+
+.items {
+  padding: var(--v-space) 0;
+  background-color: #f3f1ed;
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 25px;
+}
+
+@media (min-width: 768px) {
+  .items-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.item a {
+  display: block;
+}
+
+.item h3 {
+  min-height: 0;
+  margin: 1em 0 0.5em;
+  font-size: clamp(12px, 2vw, 20px);
+}
+
+.item p {
+  max-width: 20em;
+  min-height: 0;
+  font-size: clamp(10px, 1.6vw, 14px);
+}
+
+.item img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 100%;
+}
+
+@supports not (aspect-ratio: 3 / 2) {
+  .item img {
+    height: 180px;
+  }
+}
+
+.footer {
+  padding: 70px 0;
+  font-size: 13px;
+  color: #707070;
+  background-color: #fff;
+}
+
+.footer-container {
+  display: grid;
+  gap: 50px;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+
+  .footer-container > .footer-site {
+    margin-bottom: 20px;
+  }
+
+  .footer-container > *:not(.footer-sns) {
+    justify-self: start;
+  }
+
+  .footer-container > .footer-sns {
+    grid-row: 1 / 4;
+    grid-column: 2;
+    align-self: center;
+    justify-self: end;
+  }
+}
+
+.footer-sns {
+  display: flex;
+  gap: 24px;
+  font-size: 24px;
+}
+
+.footer-sns a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  clip-path: circle(50%);
+  color: #fff;
+  background-color: #ccc;
+  aspect-ratio: 1 / 1;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  .footer-sns a {
+    height: 36px;
+  }
+}
+
+.oss-list {
+  padding: var(--v-space) 0;
+  background-color: #f3f1ed;
+}
+
+.oss-list-container {
+  display: grid;
+  gap: 27px;
+}
+
+@media (min-width: 768px) {
+  .oss-list-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.oss {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 27px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.oss h3 {
+  margin-bottom: 38px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.oss .desc {
+  margin-bottom: 38px;
+}
+
+.oss .version {
+  margin-top: auto;
+  margin-bottom: 22px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.oss .btn {
+  width: auto;
 }
