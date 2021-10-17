@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 const Footer: React.VFC = () => (
   <footer className="footer">
@@ -10,8 +11,7 @@ const Footer: React.VFC = () => (
       <ul className="footer-sns">
         <li>
           <a href="https://github.com/nekochans">
-            <i className="fab fa-github" />
-            <span className="sr-only">GitHub</span>
+            <FaGithub className="fab fa-github" />
           </a>
         </li>
       </ul>
