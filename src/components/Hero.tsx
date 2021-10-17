@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Hero: React.VFC = () => (
+const Hero: React.VFC = () => (
   <section className="hero">
     <div className="hero-container w-container">
       <h1>nekochans</h1>
