@@ -3,7 +3,9 @@ import type { GetStaticProps, NextPage } from 'next';
 import DefaultLayout from '../layouts/DefaultLayout';
 import { metaTagList } from '../constants/metaTag';
 import MemberList from '../components/MemberList';
+import WebServiceList from '../components/WebServiceList';
 
+// TODO 定義が重複しているのでどこかで統一する
 type Props = {
   members: {
     id: number;
@@ -11,11 +13,19 @@ type Props = {
     githubPicture: string;
     githubUserName: string;
   }[];
+  webServices: {
+    id: number;
+    name: string;
+    serviceUrl: string;
+    ogpUrl: string;
+    description: string;
+  }[];
 };
 
-const IndexPage: NextPage<Props> = ({ members }) => (
+const IndexPage: NextPage<Props> = ({ members, webServices }) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <MemberList members={members} />
+    <WebServiceList webServices={webServices} />
   </DefaultLayout>
 );
 
@@ -37,7 +47,24 @@ export const getStaticProps: GetStaticProps = () => {
     },
   ];
 
-  return { props: { members } };
+  const webServices = [
+    {
+      id: 1,
+      name: 'Mindexer',
+      serviceUrl: 'https://www.mindexer.net',
+      ogpUrl: 'https://www.mindexer.net/assets/ogp.png',
+      description: 'This service makes Qiita stock convenient.',
+    },
+    {
+      id: 2,
+      name: 'LGTMeow',
+      serviceUrl: 'https://lgtmeow.com',
+      ogpUrl: 'https://lgtmeow.com/ogp.webp',
+      description: 'LGTM image share service for cat lovers.',
+    },
+  ];
+
+  return { props: { members, webServices } };
 };
 
 export default IndexPage;

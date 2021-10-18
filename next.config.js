@@ -5,6 +5,8 @@ module.exports = {
     domains: [
       'avatars0.githubusercontent.com',
       'avatars1.githubusercontent.com',
+      'www.mindexer.net',
+      'lgtmeow.com',
     ],
   },
 };
