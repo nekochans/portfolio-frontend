@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonGitHub from './ButtonGitHub';
 
 // TODO 定義が重複しているのでどこかで統一する
 type Props = {
@@ -14,9 +15,7 @@ const Oss: React.VFC<Props> = ({ name, url, version, description }) => (
     <h3>{name}</h3>
     <p className="desc">{description}</p>
     <p className="version">{version}</p>
-    <a href={url} className="btn">
-      Go To GitHub
-    </a>
+    <ButtonGitHub url={url} />
   </div>
 );
 
