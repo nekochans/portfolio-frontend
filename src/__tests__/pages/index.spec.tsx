@@ -24,8 +24,29 @@ test('IndexPage Snapshot test', () => {
         githubUserName: 'kobayashi-m42',
       },
     ],
+    webServices: [
+      {
+        id: 1,
+        name: 'Mindexer',
+        serviceUrl: 'https://www.mindexer.net',
+        ogpUrl: 'https://www.mindexer.net/assets/ogp.png',
+        description: 'This service makes Qiita stock convenient.',
+      },
+      {
+        id: 2,
+        name: 'LGTMeow',
+        serviceUrl: 'https://lgtmeow.com',
+        ogpUrl: 'https://lgtmeow.com/ogp.webp',
+        description: 'LGTM image share service for cat lovers.',
+      },
+    ],
   };
 
-  const { asFragment } = render(<IndexPage members={testProps.members} />);
+  const { asFragment } = render(
+    <IndexPage
+      members={testProps.members}
+      webServices={testProps.webServices}
+    />,
+  );
   expect(asFragment()).toMatchSnapshot();
 });
