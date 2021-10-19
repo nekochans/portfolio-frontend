@@ -10,7 +10,11 @@ const Footer: React.VFC = () => (
 
       <ul className="footer-sns">
         <li>
-          <a href="https://github.com/nekochans">
+          <a
+            href="https://github.com/nekochans"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub className="fab fa-github" />
           </a>
         </li>

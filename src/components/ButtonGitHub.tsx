@@ -5,7 +5,7 @@ type Props = {
 };
 
 const ButtonGitHub: React.VFC<Props> = ({ url }) => (
-  <a href={url} className="btn">
+  <a href={url} className="btn" target="_blank" rel="noopener noreferrer">
     Go To GitHub
   </a>
 );

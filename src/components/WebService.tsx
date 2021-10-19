@@ -17,7 +17,7 @@ const WebService: React.VFC<Props> = ({
   description,
 }) => (
   <article className="item">
-    <a href={serviceUrl}>
+    <a href={serviceUrl} target="_blank" rel="noopener noreferrer">
       <figure>
         <Image src={ogpUrl} alt={name} width="1000" height="750" />
       </figure>

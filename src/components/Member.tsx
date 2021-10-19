@@ -10,7 +10,7 @@ type Props = {
 
 const Member: React.VFC<Props> = ({ cvUrl, githubPicture, githubUserName }) => (
   <article className="item">
-    <a href={cvUrl}>
+    <a href={cvUrl} target="_blank" rel="noopener noreferrer">
       <figure>
         <Image
           src={githubPicture}
