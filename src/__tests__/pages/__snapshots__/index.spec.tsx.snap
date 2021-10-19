@@ -34,6 +34,8 @@ exports[`IndexPage Snapshot test 1`] = `
       <a
         class="btn"
         href="https://github.com/nekochans"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Go To GitHub
       </a>
@@ -61,6 +63,8 @@ exports[`IndexPage Snapshot test 1`] = `
         >
           <a
             href="https://github.com/keitakn/cv"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <figure>
               <div
@@ -96,6 +100,8 @@ exports[`IndexPage Snapshot test 1`] = `
         >
           <a
             href="https://github.com/kobayashi-m42/cv"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <figure>
               <div
@@ -151,6 +157,8 @@ exports[`IndexPage Snapshot test 1`] = `
         >
           <a
             href="https://www.mindexer.net"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <figure>
               <div
@@ -189,6 +197,8 @@ exports[`IndexPage Snapshot test 1`] = `
         >
           <a
             href="https://lgtmeow.com"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <figure>
               <div
@@ -244,6 +254,8 @@ exports[`IndexPage Snapshot test 1`] = `
         <li>
           <a
             href="https://github.com/nekochans"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <svg
               class="fab fa-github"
