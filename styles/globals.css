@@ -64,7 +64,7 @@ img {
 
 .hero {
   height: 650px;
-  background-image: url(http://localhost:2929/hero.webp);
+  background-image: url(https://images.nekochans.org/hero.webp);
   background-position: center;
   background-size: cover;
 }
