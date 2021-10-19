@@ -1,19 +1,19 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { MetaTag } from '../constants/metaTag';
+import Header from '../components/Header';
+import { appUrlPath } from '../constants/url';
+import Hero from '../components/Hero';
 import Footer from '../components/Footer';
-import styles from '../../styles/Home.module.css';
-import Title from '../components/Title';
-import Description from '../components/Description';
 
 type Props = {
   children: ReactNode;
   metaTag: MetaTag;
-  filename: string;
 };
 
-const DefaultLayout: React.VFC<Props> = ({ children, metaTag, filename }) => (
-  <div className={styles.container}>
+const DefaultLayout: React.VFC<Props> = ({ children, metaTag }) => (
+  <>
     <Head>
       <title>{metaTag.title}</title>
       <meta charSet="utf-8" />
@@ -26,13 +26,20 @@ const DefaultLayout: React.VFC<Props> = ({ children, metaTag, filename }) => (
       <meta property="og:site_name" content={metaTag.title} />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <main className={styles.main}>
-      <Title />
-      <Description filename={filename} />
-      {children}
-    </main>
+    <Header
+      topLink={
+        <Link href={appUrlPath.top}>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a>
+            <h1>nekochans</h1>
+          </a>
+        </Link>
+      }
+    />
+    <Hero />
+    {children}
     <Footer />
-  </div>
+  </>
 );
 
 export default DefaultLayout;

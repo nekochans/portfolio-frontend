@@ -1,50 +1,70 @@
 import React from 'react';
 import type { GetStaticProps, NextPage } from 'next';
-import CardList, { CardListItem } from '../components/CardList';
 import DefaultLayout from '../layouts/DefaultLayout';
 import { metaTagList } from '../constants/metaTag';
+import MemberList from '../components/MemberList';
+import WebServiceList from '../components/WebServiceList';
 
+// TODO 定義が重複しているのでどこかで統一する
 type Props = {
-  items: CardListItem[];
-  filename: string;
+  members: {
+    id: number;
+    cvUrl: string;
+    githubPicture: string;
+    githubUserName: string;
+  }[];
+  webServices: {
+    id: number;
+    name: string;
+    serviceUrl: string;
+    ogpUrl: string;
+    description: string;
+  }[];
 };
 
-const IndexPage: NextPage<Props> = ({ items, filename }) => (
-  <DefaultLayout filename={filename} metaTag={metaTagList().top}>
-    <CardList items={items} />
+const IndexPage: NextPage<Props> = ({ members, webServices }) => (
+  <DefaultLayout metaTag={metaTagList().top}>
+    <MemberList members={members} />
+    <WebServiceList webServices={webServices} />
   </DefaultLayout>
 );
 
 export const getStaticProps: GetStaticProps = () => {
-  const items = [
+  const members = [
     {
       id: 1,
-      title: 'Documentation',
-      url: 'https://nextjs.org/docs',
-      description: 'Find in-depth information about Next.js features and API.',
+      cvUrl: 'https://github.com/keitakn/cv',
+      githubPicture:
+        'https://avatars1.githubusercontent.com/u/11032365?s=460&v=4',
+      githubUserName: 'keitakn',
     },
     {
       id: 2,
-      title: 'Learn',
-      url: 'https://nextjs.org/learn',
-      description: 'Learn about Next.js in an interactive course with quizzes!',
-    },
-    {
-      id: 3,
-      title: 'Examples',
-      url: 'https://github.com/vercel/next.js/tree/master/examples',
-      description: 'Discover and deploy boilerplate example Next.js projects.',
-    },
-    {
-      id: 4,
-      title: 'Deploy',
-      url: 'https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app',
-      description:
-        'Instantly deploy your Next.js site to a public URL with Vercel.',
+      cvUrl: 'https://github.com/kobayashi-m42/cv',
+      githubPicture:
+        'https://avatars0.githubusercontent.com/u/32682645?s=460&v=4',
+      githubUserName: 'kobayashi-m42',
     },
   ];
 
-  return { props: { items, filename: 'src/pages/index.tsx' } };
+  const webServices = [
+    {
+      id: 1,
+      name: 'Mindexer',
+      serviceUrl: 'https://www.mindexer.net',
+      ogpUrl: 'https://www.mindexer.net/assets/ogp.png',
+      description: 'This service makes Qiita stock convenient.',
+    },
+    {
+      id: 2,
+      name: 'LGTMeow',
+      serviceUrl: 'https://lgtmeow.com',
+      ogpUrl: 'https://lgtmeow.com/ogp.webp',
+      description: 'LGTM image share service for cat lovers.',
+    },
+  ];
+
+  return { props: { members, webServices } };
 };
 
 export default IndexPage;

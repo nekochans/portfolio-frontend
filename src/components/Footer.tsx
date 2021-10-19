@@ -1,19 +1,26 @@
 import React from 'react';
-import Image from 'next/image';
-import styles from '../../styles/Home.module.css';
+import { FaGithub } from 'react-icons/fa';
 
 const Footer: React.VFC = () => (
-  <footer className={styles.footer}>
-    <a
-      href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Powered by{' '}
-      <span className={styles.logo}>
-        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-      </span>
-    </a>
+  <footer className="footer">
+    <div className="footer-container w-container">
+      <div className="footer-site">
+        <h1>nekochans</h1>
+      </div>
+
+      <ul className="footer-sns">
+        <li>
+          <a
+            href="https://github.com/nekochans"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="fab fa-github" />
+          </a>
+        </li>
+      </ul>
+      <div className="footer-copy">Copyright (c) nekochans.</div>
+    </div>
   </footer>
 );
 

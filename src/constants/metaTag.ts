@@ -1,12 +1,12 @@
 import { appUrlPath, appUrl } from './url';
 
-type AppName = 'Next Sample App';
+type AppName = 'nekochans';
 
-const appName: AppName = 'Next Sample App';
+const appName: AppName = 'nekochans';
 
 const defaultTitle = appName;
 
-const defaultDescription = 'Next.js のサンプルプロジェクトです。';
+const defaultDescription = 'GitHub Organization Introduction to nekochans';
 
 export type MetaTag = {
   title: string;
@@ -27,17 +27,5 @@ export const metaTagList = (): MetaTagList => ({
     ogpTargetUrl: appUrl.top,
     appName,
     description: defaultDescription,
-  },
-  isr: {
-    title: `${defaultTitle} ISRサンプルページ`,
-    ogpImgUrl: appUrl.ogpImg,
-    ogpTargetUrl: appUrl.isr,
-    appName,
-  },
-  repos: {
-    title: `${defaultTitle} GitHubリポジトリ一覧`,
-    ogpImgUrl: appUrl.ogpImg,
-    ogpTargetUrl: appUrl.repos,
-    appName,
   },
 });
