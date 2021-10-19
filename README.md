@@ -64,10 +64,10 @@ Storybook のサーバーを起動します。
 環境変数は以下の環境毎に必要です。
 
 - Production
-    - 本番環境
+  - 本番環境
 - Preview
-    - GitHub のブランチにプッシュされる度に一時的に生成される環境
+  - GitHub のブランチにプッシュされる度に一時的に生成される環境
 - Development
-    - [vercel dev](https://vercel.com/docs/cli#commands/dev) コマンドでローカル環境を起動した場合、この環境変数が利用されます。
+  - [vercel dev](https://vercel.com/docs/cli#commands/dev) コマンドでローカル環境を起動した場合、この環境変数が利用されます。
 
 ※ 全環境で共有な環境変数を設定する事も可能です。
