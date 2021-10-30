@@ -12,6 +12,7 @@ module.exports = {
     '**/build/**',
     '**/coverage/**',
   ],
+  customSyntax: 'postcss-syntax',
   rules: {
     'string-quotes': 'single',
     'at-rule-no-unknown': [true, { ignoreAtRules: ['tailwind'] }],
