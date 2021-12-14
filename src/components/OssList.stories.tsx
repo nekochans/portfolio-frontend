@@ -1,16 +1,11 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ComponentStoryObj } from '@storybook/react';
 import DefaultLayout from '../layouts/DefaultLayout';
-import OssList from './OssList';
+import OssList, { Props } from './OssList';
 import { metaTagList } from '../constants/metaTag';
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
-  title: 'src/components/OssList.tsx',
-  component: OssList,
-  includeStories: ['showOssListWithDefaultLayout'],
-};
-
-const props = {
+const props: Props = {
   ossList: [
     {
       id: 1,
@@ -38,8 +33,18 @@ const props = {
   ],
 };
 
-export const showOssListWithDefaultLayout = (): JSX.Element => (
+const OssListWithDefaultLayout: React.FC<Props> = ({ ossList }) => (
   <DefaultLayout metaTag={metaTagList().top}>
-    <OssList ossList={props.ossList} />
+    <OssList ossList={ossList} />
   </DefaultLayout>
 );
+
+type Story = ComponentStoryObj<typeof OssListWithDefaultLayout>;
+
+export default {
+  component: OssListWithDefaultLayout,
+};
+
+export const Default: Story = {
+  args: { ossList: props.ossList },
+};
