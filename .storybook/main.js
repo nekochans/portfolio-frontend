@@ -6,7 +6,7 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    '@storybook/addon-viewport',
+    '@storybook/addon-essentials',
     'storybook-css-modules-preset',
   ],
 };
