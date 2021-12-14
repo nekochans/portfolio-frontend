@@ -2,7 +2,7 @@ import React from 'react';
 import Member from './Member';
 
 // TODO 定義が重複しているのでどこかで統一する
-type Props = {
+export type Props = {
   members: {
     id: number;
     cvUrl: string;
