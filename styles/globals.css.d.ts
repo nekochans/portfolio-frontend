@@ -1,3 +1,4 @@
+// eslint-disable-next-line init-declarations
 declare const styles: {
   readonly 'w-container': string;
   readonly header: string;
