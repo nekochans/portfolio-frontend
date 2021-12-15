@@ -1,11 +1,12 @@
-import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { MetaTag } from '../constants/metaTag';
-import Header from '../components/Header';
-import { appUrlPath } from '../constants/url';
-import Hero from '../components/Hero';
+import React, { ReactNode } from 'react';
+
 import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import { MetaTag } from '../constants/metaTag';
+import { appUrlPath } from '../constants/url';
 
 type Props = {
   children: ReactNode;

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import WebService from './WebService';
 
 // TODO 定義が重複しているのでどこかで統一する

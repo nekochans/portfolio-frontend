@@ -1,9 +1,12 @@
 import React from 'react';
+
 // eslint-disable-next-line import/no-extraneous-dependencies
-import type { ComponentStoryObj } from '@storybook/react';
-import DefaultLayout from '../layouts/DefaultLayout';
-import MemberList, { Props } from './MemberList';
 import { metaTagList } from '../constants/metaTag';
+import DefaultLayout from '../layouts/DefaultLayout';
+
+import MemberList, { Props } from './MemberList';
+
+import type { ComponentStoryObj } from '@storybook/react';
 
 const props = {
   members: [
