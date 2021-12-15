@@ -131,6 +131,7 @@ module.exports = {
       },
     ],
     'no-warning-comments': 'off',
+    'sort-keys': 'off',
   },
   overrides: [
     {
