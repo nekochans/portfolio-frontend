@@ -104,6 +104,32 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 'off',
+    'sort-imports': 'off',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
+        ],
+        pathGroups: [
+          {
+            pattern: '@alias/**',
+            group: 'parent',
+            position: 'before',
+          },
+        ],
+        alphabetize: {
+          order: 'asc',
+        },
+        'newlines-between': 'always',
+      },
+    ],
   },
   overrides: [
     {
