@@ -1,16 +1,15 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import type { ComponentStoryObj } from '@storybook/react';
 import DefaultLayout from './DefaultLayout';
 import { metaTagList } from '../constants/metaTag';
 
-// eslint-disable-next-line import/no-anonymous-default-export
+type Story = ComponentStoryObj<typeof DefaultLayout>;
+
 export default {
-  title: 'src/layouts/DefaultLayout.tsx',
   component: DefaultLayout,
-  includeStories: ['showDefaultLayoutWithProps'],
 };
 
-export const showDefaultLayoutWithProps = (): JSX.Element => (
-  <DefaultLayout metaTag={metaTagList().top}>
-    <p>ここから下がコンテンツ</p>
-  </DefaultLayout>
-);
+export const Default: Story = {
+  args: { metaTag: metaTagList().top, children: <p>ここから下がコンテンツ</p> },
+};
