@@ -2,7 +2,7 @@ import '../../styles/globals.css';
 import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import { pageview, googleTagManagerId } from '../utils/gtm';
+import { googleTagManagerId, pageview } from '../utils/gtm';
 import GoogleTagManager, {
   GoogleTagManagerId,
 } from '../components/GoogleTagManager';
