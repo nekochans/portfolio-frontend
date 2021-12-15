@@ -1,9 +1,12 @@
 import React from 'react';
+
 // eslint-disable-next-line import/no-extraneous-dependencies
-import type { ComponentStoryObj } from '@storybook/react';
-import DefaultLayout from '../layouts/DefaultLayout';
-import OssList, { Props } from './OssList';
 import { metaTagList } from '../constants/metaTag';
+import DefaultLayout from '../layouts/DefaultLayout';
+
+import OssList, { Props } from './OssList';
+
+import type { ComponentStoryObj } from '@storybook/react';
 
 const props: Props = {
   ossList: [

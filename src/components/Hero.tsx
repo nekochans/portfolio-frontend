@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ButtonGitHub from './ButtonGitHub';
 
 const Hero: React.VFC = () => (
