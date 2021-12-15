@@ -130,6 +130,7 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    'no-warning-comments': 'off',
   },
   overrides: [
     {
