@@ -132,6 +132,7 @@ module.exports = {
     ],
     'no-warning-comments': 'off',
     'sort-keys': 'off',
+    'no-ternary': 'off',
   },
   overrides: [
     {
