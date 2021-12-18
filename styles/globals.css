@@ -153,9 +153,9 @@ img {
 }
 
 .item img {
+  width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  width: 100%;
 }
 
 @supports not (aspect-ratio: 3 / 2) {
@@ -210,10 +210,10 @@ img {
   display: grid;
   place-items: center;
   width: 36px;
+  aspect-ratio: 1 / 1;
   clip-path: circle(50%);
   color: #fff;
   background-color: #ccc;
-  aspect-ratio: 1 / 1;
 }
 
 @supports not (aspect-ratio: 1 / 1) {
