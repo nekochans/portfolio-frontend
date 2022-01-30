@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const config = {
   reactStrictMode: true,
   images: {
     domains: [
@@ -9,4 +9,10 @@ module.exports = {
       'lgtmeow.com',
     ],
   },
+  swcMinify: true,
+  experimental: {
+    styledComponents: true,
+  },
 };
+
+export default config;
