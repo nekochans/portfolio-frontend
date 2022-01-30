@@ -9,4 +9,7 @@ module.exports = {
       'lgtmeow.com',
     ],
   },
+  experimental: {
+    styledComponents: true,
+  },
 };
