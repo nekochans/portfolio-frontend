@@ -21,13 +21,29 @@ const StyledDiv = styled.div`
   height: 100%;
 `;
 
-// TODO h1 と pタグが崩れているので確認
+const StyledTitle = styled.h1`
+  min-height: 0;
+  margin-bottom: 42px;
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(48px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.3;
+  color: #fff;
+  text-align: center;
+`;
+
+const StyledSubTitle = styled.p`
+  margin-bottom: 72px;
+  color: white;
+`;
 
 const Hero: React.VFC = () => (
   <StyledSection>
     <StyledDiv>
-      <h1>nekochans</h1>
-      <p>We are a Freelance Web Engineer Organization.</p>
+      <StyledTitle>nekochans</StyledTitle>
+      <StyledSubTitle>
+        We are a Freelance Web Engineer Organization.
+      </StyledSubTitle>
       <ButtonGitHub url="https://github.com/nekochans" />
     </StyledDiv>
   </StyledSection>
