@@ -1,5 +1,3 @@
-const webpack = require('webpack');
-
 module.exports = {
   stories: [
     '../src/components/**/*.stories.@(tsx|mdx)',
@@ -12,16 +10,8 @@ module.exports = {
     'storybook-css-modules-preset',
     'storybook-addon-next',
   ],
+  framework: '@storybook/react',
   core: {
     builder: 'webpack5',
-  },
-  webpackFinal: async (config) => {
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        Buffer: ['buffer', 'Buffer'],
-      }),
-    );
-
-    return config;
   },
 };
