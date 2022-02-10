@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import mixins from '../styles/mixins';
 
 import ButtonGitHub from './ButtonGitHub';
-import hero from './hero.webp';
+import heroImage from './images/hero.webp';
 
 const StyledSection = styled.section`
   height: 650px;
-  background-image: url(${hero.src});
+  background-image: url(${heroImage.src});
   background-position: center;
   background-size: cover;
 `;
