@@ -8,5 +8,10 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-essentials',
     'storybook-css-modules-preset',
+    'storybook-addon-next',
   ],
+  framework: '@storybook/react',
+  core: {
+    builder: 'webpack5',
+  },
 };
