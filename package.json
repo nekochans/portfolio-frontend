@@ -20,7 +20,8 @@
     "test:coverage": "jest --collect-coverage",
     "test:ci": "jest --runInBand --collect-coverage",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build:storybook": "build-storybook -o build/storybook"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "extensible-custom-error": "^0.0.7",
@@ -45,6 +46,7 @@
     "@types/styled-components": "^5.1.23",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
+    "chromatic": "^6.5.4",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.4.0",
