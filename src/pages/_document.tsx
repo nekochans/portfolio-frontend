@@ -28,12 +28,12 @@ export default class CustomDocument extends Document {
 
       return {
         ...initialProps,
-        styles: (
-          <>
+        styles: [
+          <React.Fragment key="1">
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
-        ),
+          </React.Fragment>,
+        ],
       };
     } finally {
       sheet.seal();
