@@ -41,6 +41,7 @@ const props = {
   ],
 };
 
+// TODO https://github.com/RyanClementsHax/storybook-addon-next/issues/72 が解決するまではこのStoryは閲覧出来ないので別途対策を考える
 const WebServiceListWithDefaultLayout: React.FC<Props> = ({ webServices }) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <WebServiceList webServices={webServices} />

@@ -9,8 +9,7 @@ module.exports = {
       'lgtmeow.com',
     ],
   },
-  swcMinify: true,
-  experimental: {
+  compiler: {
     styledComponents: true,
   },
 };

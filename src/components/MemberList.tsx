@@ -12,7 +12,7 @@ export type Props = {
   }[];
 };
 
-const MemberList: React.VFC<Props> = ({ members }) => (
+const MemberList: React.FC<Props> = ({ members }) => (
   <section className="items">
     <div className="w-container">
       <h1 className="heading-decoration">Members</h1>

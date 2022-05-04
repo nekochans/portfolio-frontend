@@ -37,7 +37,7 @@ const StyledSubTitle = styled.p`
   color: white;
 `;
 
-const Hero: React.VFC = () => (
+const Hero: React.FC = () => (
   <StyledSection>
     <StyledDiv>
       <StyledTitle>nekochans</StyledTitle>

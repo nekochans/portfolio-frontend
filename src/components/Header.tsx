@@ -20,7 +20,7 @@ const StyledDiv = styled.div`
   height: 100%;
 `;
 
-const Header: React.VFC<Props> = ({ topLink }) => (
+const Header: React.FC<Props> = ({ topLink }) => (
   <StyledHeader>
     <StyledDiv>
       <div>{topLink}</div>

@@ -10,7 +10,7 @@ type Props = {
   description: string;
 };
 
-const WebService: React.VFC<Props> = ({
+const WebService: React.FC<Props> = ({
   name,
   serviceUrl,
   ogpUrl,

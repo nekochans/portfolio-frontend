@@ -8,7 +8,7 @@ type Props = {
   githubUserName: string;
 };
 
-const Member: React.VFC<Props> = ({ cvUrl, githubPicture, githubUserName }) => (
+const Member: React.FC<Props> = ({ cvUrl, githubPicture, githubUserName }) => (
   <article className="item">
     <a href={cvUrl} target="_blank" rel="noopener noreferrer">
       <figure>

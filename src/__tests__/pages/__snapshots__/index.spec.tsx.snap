@@ -3,10 +3,10 @@
 exports[`IndexPage Snapshot test 1`] = `
 <DocumentFragment>
   <header
-    class="sc-bdvvtL gIyQeN"
+    class="sc-bczRLJ kdwizm"
   >
     <div
-      class="sc-gsDKAQ hPDmLs"
+      class="sc-gsnTZi cxqtns"
     >
       <div>
         <a
@@ -20,23 +20,23 @@ exports[`IndexPage Snapshot test 1`] = `
     </div>
   </header>
   <section
-    class="sc-hKwDye ecUdFE"
+    class="sc-hKMtZM cpHHVH"
   >
     <div
-      class="sc-eCImPb lazRPM"
+      class="sc-eCYdqJ huwSZa"
     >
       <h1
-        class="sc-jRQBWg kiMBhV"
+        class="sc-jSMfEi hkNRoa"
       >
         nekochans
       </h1>
       <p
-        class="sc-gKclnd kNnFnH"
+        class="sc-gKXOVf dLyiTn"
       >
         We are a Freelance Web Engineer Organization.
       </p>
       <a
-        class="sc-dkPtRN dOKyHf"
+        class="sc-dkzDqf effYWU"
         href="https://github.com/nekochans"
         rel="noopener noreferrer"
         target="_blank"

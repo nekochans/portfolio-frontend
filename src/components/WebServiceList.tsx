@@ -13,7 +13,7 @@ export type Props = {
   }[];
 };
 
-const WebServiceList: React.VFC<Props> = ({ webServices }) => (
+const WebServiceList: React.FC<Props> = ({ webServices }) => (
   <section className="items">
     <div className="w-container">
       <h1 className="heading-decoration">WebServices</h1>
