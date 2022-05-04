@@ -18,7 +18,7 @@ const StyledComponent = styled.a`
   border-radius: 4px;
 `;
 
-const ButtonGitHub: React.VFC<Props> = ({ url }) => (
+const ButtonGitHub: React.FC<Props> = ({ url }) => (
   <StyledComponent href={url} target="_blank" rel="noopener noreferrer">
     Go To GitHub
   </StyledComponent>

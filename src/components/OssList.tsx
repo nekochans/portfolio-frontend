@@ -13,7 +13,7 @@ export type Props = {
   }[];
 };
 
-const OssList: React.VFC<Props> = ({ ossList }) => (
+const OssList: React.FC<Props> = ({ ossList }) => (
   <section className="oss-list">
     <div className="w-container">
       <h1 className="heading-decoration">OSS</h1>

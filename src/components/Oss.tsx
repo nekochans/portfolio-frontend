@@ -11,7 +11,7 @@ type Props = {
   description: string;
 };
 
-const Oss: React.VFC<Props> = ({ name, url, version, description }) => (
+const Oss: React.FC<Props> = ({ name, url, version, description }) => (
   <div className="oss">
     <h3>{name}</h3>
     <p className="desc">{description}</p>
