@@ -1,12 +1,11 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
+import type { ComponentStoryObj } from '@storybook/react';
 import { metaTagList } from '../constants/metaTag';
 import DefaultLayout from '../layouts/DefaultLayout';
 
 import MemberList, { Props } from './MemberList';
-
-import type { ComponentStoryObj } from '@storybook/react';
 
 const props = {
   members: [
@@ -40,6 +39,7 @@ const MemberListWithDefaultLayout: React.FC<Props> = ({ members }) => (
 
 type Story = ComponentStoryObj<typeof MemberListWithDefaultLayout>;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   component: MemberListWithDefaultLayout,
 };

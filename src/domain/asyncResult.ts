@@ -18,7 +18,7 @@ export const createFailureResult = <E>(value: E): FailureResult<E> => ({
 });
 
 export const isSuccessResult = <T>(
-  result: AsyncResult<unknown, unknown>,
+  result: AsyncResult<unknown, unknown>
 ): result is SuccessResult<T> => {
   if ('_' in result) {
     return result._ === SuccessMarker;

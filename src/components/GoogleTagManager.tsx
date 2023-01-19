@@ -1,5 +1,5 @@
-import Script from 'next/script';
 import React from 'react';
+import Script from 'next/script';
 
 export type GoogleTagManagerId = `GTM-${string}`;
 

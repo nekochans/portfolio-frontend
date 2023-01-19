@@ -1,14 +1,14 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
+import type { ComponentStoryObj } from '@storybook/react';
 import { metaTagList } from '../constants/metaTag';
 
 import DefaultLayout from './DefaultLayout';
 
-import type { ComponentStoryObj } from '@storybook/react';
-
 type Story = ComponentStoryObj<typeof DefaultLayout>;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   component: DefaultLayout,
 };

@@ -1,13 +1,12 @@
 import '../../styles/globals.css';
-import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 
 import GoogleTagManager, {
   GoogleTagManagerId,
 } from '../components/GoogleTagManager';
 import { googleTagManagerId, pageview } from '../utils/gtm';
-
-import type { AppProps } from 'next/app';
 
 const CustomApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   const router = useRouter();

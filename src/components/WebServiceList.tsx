@@ -4,13 +4,13 @@ import WebService from './WebService';
 
 // TODO 定義が重複しているのでどこかで統一する
 export type Props = {
-  webServices: {
+  webServices: Array<{
     id: number;
     name: string;
     serviceUrl: string;
     ogpUrl: string;
     description: string;
-  }[];
+  }>;
 };
 
 const WebServiceList: React.FC<Props> = ({ webServices }) => (

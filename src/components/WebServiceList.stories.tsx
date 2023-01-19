@@ -1,12 +1,11 @@
 import React from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
+import type { ComponentStoryObj } from '@storybook/react';
 import { metaTagList } from '../constants/metaTag';
 import DefaultLayout from '../layouts/DefaultLayout';
 
 import WebServiceList, { Props } from './WebServiceList';
-
-import type { ComponentStoryObj } from '@storybook/react';
 
 const props = {
   webServices: [
@@ -50,6 +49,7 @@ const WebServiceListWithDefaultLayout: React.FC<Props> = ({ webServices }) => (
 
 type Story = ComponentStoryObj<typeof WebServiceListWithDefaultLayout>;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   component: WebServiceListWithDefaultLayout,
 };
