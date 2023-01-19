@@ -31,9 +31,7 @@ const DefaultLayout: React.VFC<Props> = ({ children, metaTag }) => (
       topLink={
         <Link href={appUrlPath.top}>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a>
-            <h1>nekochans</h1>
-          </a>
+          <h1>nekochans</h1>
         </Link>
       }
     />

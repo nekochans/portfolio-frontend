@@ -3,10 +3,10 @@
 exports[`IndexPage Snapshot test 1`] = `
 <DocumentFragment>
   <header
-    class="sc-bczRLJ kdwizm"
+    class="header"
   >
     <div
-      class="sc-gsnTZi cxqtns"
+      class="header-container w-container"
     >
       <div>
         <a
@@ -67,28 +67,17 @@ exports[`IndexPage Snapshot test 1`] = `
             target="_blank"
           >
             <figure>
-              <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-              >
-                <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%271000%27%20height=%27750%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                  />
-                </span>
-                <img
-                  alt="keitakn"
-                  data-nimg="intrinsic"
-                  decoding="async"
-                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-                />
-                <noscript />
-              </span>
+              <img
+                alt="keitakn"
+                data-nimg="1"
+                decoding="async"
+                height="750"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F11032365%3Fs%3D460%26v%3D4&w=2048&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F11032365%3Fs%3D460%26v%3D4&w=1080&q=75 1x, /_next/image?url=https%3A%2F%2Favatars1.githubusercontent.com%2Fu%2F11032365%3Fs%3D460%26v%3D4&w=2048&q=75 2x"
+                style="color: transparent;"
+                width="1000"
+              />
             </figure>
             <h3>
               keitakn
@@ -104,28 +93,17 @@ exports[`IndexPage Snapshot test 1`] = `
             target="_blank"
           >
             <figure>
-              <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-              >
-                <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%271000%27%20height=%27750%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                  />
-                </span>
-                <img
-                  alt="kobayashi-m42"
-                  data-nimg="intrinsic"
-                  decoding="async"
-                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-                />
-                <noscript />
-              </span>
+              <img
+                alt="kobayashi-m42"
+                data-nimg="1"
+                decoding="async"
+                height="750"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F32682645%3Fs%3D460%26v%3D4&w=2048&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F32682645%3Fs%3D460%26v%3D4&w=1080&q=75 1x, /_next/image?url=https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F32682645%3Fs%3D460%26v%3D4&w=2048&q=75 2x"
+                style="color: transparent;"
+                width="1000"
+              />
             </figure>
             <h3>
               kobayashi-m42
@@ -161,28 +139,17 @@ exports[`IndexPage Snapshot test 1`] = `
             target="_blank"
           >
             <figure>
-              <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-              >
-                <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%271000%27%20height=%27750%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                  />
-                </span>
-                <img
-                  alt="Mindexer"
-                  data-nimg="intrinsic"
-                  decoding="async"
-                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-                />
-                <noscript />
-              </span>
+              <img
+                alt="Mindexer"
+                data-nimg="1"
+                decoding="async"
+                height="750"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fwww.mindexer.net%2Fassets%2Fogp.png&w=2048&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fwww.mindexer.net%2Fassets%2Fogp.png&w=1080&q=75 1x, /_next/image?url=https%3A%2F%2Fwww.mindexer.net%2Fassets%2Fogp.png&w=2048&q=75 2x"
+                style="color: transparent;"
+                width="1000"
+              />
             </figure>
             <h3>
               Mindexer
@@ -201,28 +168,17 @@ exports[`IndexPage Snapshot test 1`] = `
             target="_blank"
           >
             <figure>
-              <span
-                style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
-              >
-                <span
-                  style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%271000%27%20height=%27750%27/%3e"
-                    style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
-                  />
-                </span>
-                <img
-                  alt="LGTMeow"
-                  data-nimg="intrinsic"
-                  decoding="async"
-                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-                />
-                <noscript />
-              </span>
+              <img
+                alt="LGTMeow"
+                data-nimg="1"
+                decoding="async"
+                height="750"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Flgtmeow.com%2Fogp.webp&w=2048&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Flgtmeow.com%2Fogp.webp&w=1080&q=75 1x, /_next/image?url=https%3A%2F%2Flgtmeow.com%2Fogp.webp&w=2048&q=75 2x"
+                style="color: transparent;"
+                width="1000"
+              />
             </figure>
             <h3>
               LGTMeow

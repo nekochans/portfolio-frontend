@@ -10,6 +10,6 @@ export const appUrl = {
   ogpImg: `${appBaseUrl()}/ogp.webp`,
 } as const;
 
-export type AppUrlPath = typeof appUrlPath[keyof typeof appUrlPath];
+export type AppUrlPath = (typeof appUrlPath)[keyof typeof appUrlPath];
 
-export type AppUrl = typeof appUrl[keyof typeof appUrl];
+export type AppUrl = (typeof appUrl)[keyof typeof appUrl];
