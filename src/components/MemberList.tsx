@@ -4,12 +4,12 @@ import Member from './Member';
 
 // TODO 定義が重複しているのでどこかで統一する
 export type Props = {
-  members: {
+  members: Array<{
     id: number;
     cvUrl: string;
     githubPicture: string;
     githubUserName: string;
-  }[];
+  }>;
 };
 
 const MemberList: React.FC<Props> = ({ members }) => (

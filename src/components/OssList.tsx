@@ -4,13 +4,13 @@ import Oss from './Oss';
 
 // TODO 定義が重複しているのでどこかで統一する
 export type Props = {
-  ossList: {
+  ossList: Array<{
     id: number;
     name: string;
     url: string;
     version: string;
     description: string;
-  }[];
+  }>;
 };
 
 const OssList: React.FC<Props> = ({ ossList }) => (

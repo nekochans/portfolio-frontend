@@ -1,8 +1,8 @@
 /**
  * @jest-environment jsdom
  */
-import { render } from '@testing-library/react';
 import React from 'react';
+import { render } from '@testing-library/react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import IndexPage from '../../pages';
@@ -47,7 +47,7 @@ test('IndexPage Snapshot test', () => {
     <IndexPage
       members={testProps.members}
       webServices={testProps.webServices}
-    />,
+    />
   );
   expect(asFragment()).toMatchSnapshot();
 });

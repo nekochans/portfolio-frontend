@@ -1,27 +1,26 @@
 import React from 'react';
 
+import type { GetStaticProps, NextPage } from 'next';
 import MemberList from '../components/MemberList';
 import WebServiceList from '../components/WebServiceList';
 import { metaTagList } from '../constants/metaTag';
 import DefaultLayout from '../layouts/DefaultLayout';
 
-import type { GetStaticProps, NextPage } from 'next';
-
 // TODO 定義が重複しているのでどこかで統一する
 type Props = {
-  members: {
+  members: Array<{
     id: number;
     cvUrl: string;
     githubPicture: string;
     githubUserName: string;
-  }[];
-  webServices: {
+  }>;
+  webServices: Array<{
     id: number;
     name: string;
     serviceUrl: string;
     ogpUrl: string;
     description: string;
-  }[];
+  }>;
 };
 
 const IndexPage: NextPage<Props> = ({ members, webServices }) => (

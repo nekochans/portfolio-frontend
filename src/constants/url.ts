@@ -1,5 +1,7 @@
 export const appBaseUrl = (): string =>
-  process.env.NEXT_PUBLIC_APP_URL ? process.env.NEXT_PUBLIC_APP_URL : '';
+  process.env.NEXT_PUBLIC_APP_URL != null
+    ? process.env.NEXT_PUBLIC_APP_URL
+    : '';
 
 export const appUrlPath = {
   top: '/',
