@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { ButtonGitHub } from './ButtonGitHub';
+import { ButtonGitHub } from '../ButtonGitHub';
 
 export const Hero: FC = () => (
   <section className="hero">

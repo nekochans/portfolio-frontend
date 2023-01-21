@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import type { ComponentStoryObj } from '@storybook/react';
-import { metaTagList } from '../constants/metaTag';
-import { DefaultLayout } from '../layouts/DefaultLayout';
+import { metaTagList } from '../../constants/metaTag';
+import { DefaultLayout } from '../../layouts';
 import { MemberList, type Props } from './MemberList';
 
 const props = {

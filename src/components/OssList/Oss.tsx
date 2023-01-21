@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { ButtonGitHub } from './ButtonGitHub';
+import { ButtonGitHub } from '../ButtonGitHub/ButtonGitHub';
 
 // TODO 定義が重複しているのでどこかで統一する
 type Props = {
