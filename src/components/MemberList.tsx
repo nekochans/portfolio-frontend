@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 
 import Member from './Member';
 
@@ -12,7 +12,7 @@ export type Props = {
   }>;
 };
 
-const MemberList: React.FC<Props> = ({ members }) => (
+const MemberList: FC<Props> = ({ members }) => (
   <section className="items">
     <div className="w-container">
       <h1 className="heading-decoration">Members</h1>

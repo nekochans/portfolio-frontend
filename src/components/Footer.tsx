@@ -1,7 +1,7 @@
-import React from 'react';
+import type { FC } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
-const Footer: React.FC = () => (
+const Footer: FC = () => (
   <footer className="footer">
     <div className="footer-container w-container">
       <div className="footer-site">

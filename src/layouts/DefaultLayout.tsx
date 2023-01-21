@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ type Props = {
   metaTag: MetaTag;
 };
 
-const DefaultLayout: React.VFC<Props> = ({ children, metaTag }) => (
+const DefaultLayout: FC<Props> = ({ children, metaTag }) => (
   <>
     <Head>
       <title>{metaTag.title}</title>

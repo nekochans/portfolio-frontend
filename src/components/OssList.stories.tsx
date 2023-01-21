@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import type { ComponentStoryObj } from '@storybook/react';
@@ -35,7 +35,7 @@ const props: Props = {
   ],
 };
 
-const OssListWithDefaultLayout: React.FC<Props> = ({ ossList }) => (
+const OssListWithDefaultLayout: FC<Props> = ({ ossList }) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <OssList ossList={ossList} />
   </DefaultLayout>

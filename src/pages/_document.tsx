@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -29,10 +29,10 @@ export default class CustomDocument extends Document {
       return {
         ...initialProps,
         styles: [
-          <React.Fragment key="1">
+          <Fragment key="1">
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </React.Fragment>,
+          </Fragment>,
         ],
       };
     } finally {

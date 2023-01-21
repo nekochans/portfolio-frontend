@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 
 import WebService from './WebService';
 
@@ -13,7 +13,7 @@ export type Props = {
   }>;
 };
 
-const WebServiceList: React.FC<Props> = ({ webServices }) => (
+const WebServiceList: FC<Props> = ({ webServices }) => (
   <section className="items">
     <div className="w-container">
       <h1 className="heading-decoration">WebServices</h1>

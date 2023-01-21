@@ -1,5 +1,3 @@
-import React from 'react';
-
 import type { GetStaticProps, NextPage } from 'next';
 import MemberList from '../components/MemberList';
 import WebServiceList from '../components/WebServiceList';

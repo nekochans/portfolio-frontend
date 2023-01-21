@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import type { ComponentStoryObj } from '@storybook/react';
@@ -41,7 +41,7 @@ const props = {
 };
 
 // TODO https://github.com/RyanClementsHax/storybook-addon-next/issues/72 が解決するまではこのStoryは閲覧出来ないので別途対策を考える
-const WebServiceListWithDefaultLayout: React.FC<Props> = ({ webServices }) => (
+const WebServiceListWithDefaultLayout: FC<Props> = ({ webServices }) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <WebServiceList webServices={webServices} />
   </DefaultLayout>
