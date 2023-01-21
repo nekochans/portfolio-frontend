@@ -1,11 +1,8 @@
-import React from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies
+import type { FC } from 'react';
 import type { ComponentStoryObj } from '@storybook/react';
-import { metaTagList } from '../constants/metaTag';
-import DefaultLayout from '../layouts/DefaultLayout';
-
-import MemberList, { Props } from './MemberList';
+import { metaTagList } from '../../constants/metaTag';
+import { DefaultLayout } from '../../layouts';
+import { MemberList, type Props } from './MemberList';
 
 const props = {
   members: [
@@ -31,7 +28,7 @@ const props = {
 };
 
 // TODO https://github.com/RyanClementsHax/storybook-addon-next/issues/72 が解決するまではこのStoryは閲覧出来ないので別途対策を考える
-const MemberListWithDefaultLayout: React.FC<Props> = ({ members }) => (
+const MemberListWithDefaultLayout: FC<Props> = ({ members }) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <MemberList members={members} />
   </DefaultLayout>

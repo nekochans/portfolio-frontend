@@ -1,10 +1,8 @@
-import React from 'react';
-
 // eslint-disable-next-line import/no-extraneous-dependencies
 import type { ComponentStoryObj } from '@storybook/react';
-import { metaTagList } from '../constants/metaTag';
+import { metaTagList } from '../../constants/metaTag';
 
-import DefaultLayout from './DefaultLayout';
+import { DefaultLayout } from './DefaultLayout';
 
 type Story = ComponentStoryObj<typeof DefaultLayout>;
 

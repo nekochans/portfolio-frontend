@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import Image from 'next/image';
 
 // TODO 定義が重複しているのでどこかで統一する
@@ -10,7 +10,7 @@ type Props = {
   description: string;
 };
 
-const WebService: React.FC<Props> = ({
+export const WebService: FC<Props> = ({
   name,
   serviceUrl,
   ogpUrl,
@@ -26,5 +26,3 @@ const WebService: React.FC<Props> = ({
     </a>
   </article>
 );
-
-export default WebService;

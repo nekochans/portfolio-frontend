@@ -1,10 +1,7 @@
-import React from 'react';
-
 import type { GetStaticProps, NextPage } from 'next';
-import MemberList from '../components/MemberList';
-import WebServiceList from '../components/WebServiceList';
+import { MemberList, WebServiceList } from '../components';
 import { metaTagList } from '../constants/metaTag';
-import DefaultLayout from '../layouts/DefaultLayout';
+import { DefaultLayout } from '../layouts';
 
 // TODO 定義が重複しているのでどこかで統一する
 type Props = {

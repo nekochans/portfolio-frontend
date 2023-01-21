@@ -1,8 +1,8 @@
-import React from 'react';
+import type { FC } from 'react';
 
-import ButtonGitHub from './ButtonGitHub';
+import { ButtonGitHub } from '../ButtonGitHub';
 
-const Hero: React.VFC = () => (
+export const Hero: FC = () => (
   <section className="hero">
     <div className="hero-container w-container">
       <h1>nekochans</h1>
@@ -11,5 +11,3 @@ const Hero: React.VFC = () => (
     </div>
   </section>
 );
-
-export default Hero;

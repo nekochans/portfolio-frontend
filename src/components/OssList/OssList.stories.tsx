@@ -1,11 +1,11 @@
-import React from 'react';
+import type { FC } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import type { ComponentStoryObj } from '@storybook/react';
-import { metaTagList } from '../constants/metaTag';
-import DefaultLayout from '../layouts/DefaultLayout';
+import { metaTagList } from '../../constants/metaTag';
+import { DefaultLayout } from '../../layouts';
 
-import OssList, { Props } from './OssList';
+import { OssList, type Props } from './OssList';
 
 const props: Props = {
   ossList: [
@@ -35,7 +35,7 @@ const props: Props = {
   ],
 };
 
-const OssListWithDefaultLayout: React.FC<Props> = ({ ossList }) => (
+const OssListWithDefaultLayout: FC<Props> = ({ ossList }) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <OssList ossList={ossList} />
   </DefaultLayout>

@@ -1,6 +1,6 @@
-import React from 'react';
+import type { FC } from 'react';
 
-import ButtonGitHub from './ButtonGitHub';
+import { ButtonGitHub } from '../ButtonGitHub/ButtonGitHub';
 
 // TODO 定義が重複しているのでどこかで統一する
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
   description: string;
 };
 
-const Oss: React.FC<Props> = ({ name, url, version, description }) => (
+const Oss: FC<Props> = ({ name, url, version, description }) => (
   <div className="oss">
     <h3>{name}</h3>
     <p className="desc">{description}</p>

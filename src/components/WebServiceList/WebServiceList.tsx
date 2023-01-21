@@ -1,6 +1,6 @@
-import React from 'react';
+import type { FC } from 'react';
 
-import WebService from './WebService';
+import { WebService } from './WebService';
 
 // TODO 定義が重複しているのでどこかで統一する
 export type Props = {
@@ -13,7 +13,7 @@ export type Props = {
   }>;
 };
 
-const WebServiceList: React.FC<Props> = ({ webServices }) => (
+export const WebServiceList: FC<Props> = ({ webServices }) => (
   <section className="items">
     <div className="w-container">
       <h1 className="heading-decoration">WebServices</h1>
@@ -33,5 +33,3 @@ const WebServiceList: React.FC<Props> = ({ webServices }) => (
     </div>
   </section>
 );
-
-export default WebServiceList;

@@ -1,19 +1,16 @@
-import React, { ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import { MetaTag } from '../constants/metaTag';
-import { appUrlPath } from '../constants/url';
+import { Footer, Header, Hero } from '../../components';
+import { MetaTag } from '../../constants/metaTag';
+import { appUrlPath } from '../../constants/url';
 
 type Props = {
   children: ReactNode;
   metaTag: MetaTag;
 };
 
-const DefaultLayout: React.VFC<Props> = ({ children, metaTag }) => (
+export const DefaultLayout: FC<Props> = ({ children, metaTag }) => (
   <>
     <Head>
       <title>{metaTag.title}</title>
@@ -40,5 +37,3 @@ const DefaultLayout: React.VFC<Props> = ({ children, metaTag }) => (
     <Footer />
   </>
 );
-
-export default DefaultLayout;
