@@ -10,7 +10,7 @@ type Props = {
   description: string;
 };
 
-const WebService: FC<Props> = ({
+export const WebService: FC<Props> = ({
   name,
   serviceUrl,
   ogpUrl,
@@ -26,5 +26,3 @@ const WebService: FC<Props> = ({
     </a>
   </article>
 );
-
-export default WebService;

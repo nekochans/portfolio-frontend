@@ -8,7 +8,7 @@ type Props = {
   githubUserName: string;
 };
 
-const Member: FC<Props> = ({ cvUrl, githubPicture, githubUserName }) => (
+export const Member: FC<Props> = ({ cvUrl, githubPicture, githubUserName }) => (
   <article className="item">
     <a href={cvUrl} target="_blank" rel="noopener noreferrer">
       <figure>
@@ -23,5 +23,3 @@ const Member: FC<Props> = ({ cvUrl, githubPicture, githubUserName }) => (
     </a>
   </article>
 );
-
-export default Member;

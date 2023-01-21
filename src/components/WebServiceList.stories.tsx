@@ -1,11 +1,8 @@
 import type { FC } from 'react';
-
-// eslint-disable-next-line import/no-extraneous-dependencies
 import type { ComponentStoryObj } from '@storybook/react';
 import { metaTagList } from '../constants/metaTag';
-import DefaultLayout from '../layouts/DefaultLayout';
-
-import WebServiceList, { Props } from './WebServiceList';
+import { DefaultLayout } from '../layouts/DefaultLayout';
+import { WebServiceList, type Props } from './WebServiceList';
 
 const props = {
   webServices: [

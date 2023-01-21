@@ -3,7 +3,8 @@ import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 
-import GoogleTagManager, {
+import {
+  GoogleTagManager,
   GoogleTagManagerId,
 } from '../components/GoogleTagManager';
 import { googleTagManagerId, pageview } from '../utils/gtm';

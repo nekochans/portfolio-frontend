@@ -2,9 +2,9 @@ import type { FC, ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
+import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
+import { Hero } from '../components/Hero';
 import { MetaTag } from '../constants/metaTag';
 import { appUrlPath } from '../constants/url';
 
@@ -13,7 +13,7 @@ type Props = {
   metaTag: MetaTag;
 };
 
-const DefaultLayout: FC<Props> = ({ children, metaTag }) => (
+export const DefaultLayout: FC<Props> = ({ children, metaTag }) => (
   <>
     <Head>
       <title>{metaTag.title}</title>
@@ -40,5 +40,3 @@ const DefaultLayout: FC<Props> = ({ children, metaTag }) => (
     <Footer />
   </>
 );
-
-export default DefaultLayout;

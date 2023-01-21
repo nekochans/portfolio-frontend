@@ -13,7 +13,7 @@ export type Props = {
   }>;
 };
 
-const OssList: FC<Props> = ({ ossList }) => (
+export const OssList: FC<Props> = ({ ossList }) => (
   <section className="oss-list">
     <div className="w-container">
       <h1 className="heading-decoration">OSS</h1>
@@ -33,5 +33,3 @@ const OssList: FC<Props> = ({ ossList }) => (
     </div>
   </section>
 );
-
-export default OssList;

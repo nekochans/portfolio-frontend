@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { FaGithub } from 'react-icons/fa';
 
-const Footer: FC = () => (
+export const Footer: FC = () => (
   <footer className="footer">
     <div className="footer-container w-container">
       <div className="footer-site">
@@ -23,5 +23,3 @@ const Footer: FC = () => (
     </div>
   </footer>
 );
-
-export default Footer;

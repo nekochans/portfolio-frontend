@@ -7,7 +7,7 @@ type Props = {
   googleTagManagerId: GoogleTagManagerId;
 };
 
-const GoogleTagManager: FC<Props> = ({ googleTagManagerId }) => (
+export const GoogleTagManager: FC<Props> = ({ googleTagManagerId }) => (
   <Script
     id="gtm"
     strategy="afterInteractive"
@@ -22,5 +22,3 @@ const GoogleTagManager: FC<Props> = ({ googleTagManagerId }) => (
     }}
   />
 );
-
-export default GoogleTagManager;
