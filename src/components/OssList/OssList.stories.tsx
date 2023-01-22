@@ -5,9 +5,9 @@ import type { ComponentStoryObj } from '@storybook/react';
 import { metaTagList } from '../../constants/metaTag';
 import { DefaultLayout } from '../../layouts';
 
-import { OssList, type Props } from './OssList';
+import { OssList, type OssListProps } from './OssList';
 
-const props: Props = {
+const props: OssListProps = {
   ossList: [
     {
       id: 1,
@@ -35,7 +35,7 @@ const props: Props = {
   ],
 };
 
-const OssListWithDefaultLayout: FC<Props> = ({ ossList }) => (
+const OssListWithDefaultLayout: FC<OssListProps> = ({ ossList }) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <OssList ossList={ossList} />
   </DefaultLayout>

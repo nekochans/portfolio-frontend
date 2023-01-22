@@ -1,15 +1,9 @@
 import type { FC } from 'react';
 
-import { ButtonGitHub } from '../ButtonGitHub/ButtonGitHub';
+import { ButtonGitHub } from '../ButtonGitHub';
+import type { OssAttribute } from './OssAttribute';
 
-// TODO 定義が重複しているのでどこかで統一する
-type Props = {
-  id: number;
-  name: string;
-  url: string;
-  version: string;
-  description: string;
-};
+type Props = OssAttribute;
 
 const Oss: FC<Props> = ({ name, url, version, description }) => (
   <div className="oss">

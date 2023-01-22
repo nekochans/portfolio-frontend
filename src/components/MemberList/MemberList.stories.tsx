@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import type { ComponentStoryObj } from '@storybook/react';
 import { metaTagList } from '../../constants/metaTag';
 import { DefaultLayout } from '../../layouts';
-import { MemberList, type Props } from './MemberList';
+import { MemberList, type MemberListProps } from './MemberList';
 
 const props = {
   members: [
@@ -28,7 +28,7 @@ const props = {
 };
 
 // TODO https://github.com/RyanClementsHax/storybook-addon-next/issues/72 が解決するまではこのStoryは閲覧出来ないので別途対策を考える
-const MemberListWithDefaultLayout: FC<Props> = ({ members }) => (
+const MemberListWithDefaultLayout: FC<MemberListProps> = ({ members }) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <MemberList members={members} />
   </DefaultLayout>
