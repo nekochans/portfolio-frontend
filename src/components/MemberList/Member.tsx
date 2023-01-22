@@ -1,12 +1,8 @@
 import type { FC } from 'react';
 import Image from 'next/image';
+import type { MemberAttribute } from './MemberAttribute';
 
-// TODO 定義が重複しているのでどこかで統一する
-type Props = {
-  cvUrl: string;
-  githubPicture: string;
-  githubUserName: string;
-};
+type Props = MemberAttribute;
 
 export const Member: FC<Props> = ({ cvUrl, githubPicture, githubUserName }) => (
   <article className="item">

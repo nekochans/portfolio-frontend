@@ -1,19 +1,12 @@
 import type { FC } from 'react';
-
 import Oss from './Oss';
+import type { OssAttribute } from './OssAttribute';
 
-// TODO 定義が重複しているのでどこかで統一する
-export type Props = {
-  ossList: Array<{
-    id: number;
-    name: string;
-    url: string;
-    version: string;
-    description: string;
-  }>;
+export type OssListProps = {
+  ossList: Array<OssAttribute & { id: number }>;
 };
 
-export const OssList: FC<Props> = ({ ossList }) => (
+export const OssList: FC<OssListProps> = ({ ossList }) => (
   <section className="oss-list">
     <div className="w-container">
       <h1 className="heading-decoration">OSS</h1>
@@ -22,7 +15,6 @@ export const OssList: FC<Props> = ({ ossList }) => (
         {ossList.map((oss) => (
           <Oss
             key={oss.id}
-            id={oss.id}
             name={oss.name}
             url={oss.url}
             version={oss.version}

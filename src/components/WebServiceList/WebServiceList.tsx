@@ -1,19 +1,12 @@
 import type { FC } from 'react';
-
 import { WebService } from './WebService';
+import type { WebServiceAttribute } from './WebServiceAttribute';
 
-// TODO 定義が重複しているのでどこかで統一する
-export type Props = {
-  webServices: Array<{
-    id: number;
-    name: string;
-    serviceUrl: string;
-    ogpUrl: string;
-    description: string;
-  }>;
+export type WebServiceListProps = {
+  webServices: Array<WebServiceAttribute & { id: number }>;
 };
 
-export const WebServiceList: FC<Props> = ({ webServices }) => (
+export const WebServiceList: FC<WebServiceListProps> = ({ webServices }) => (
   <section className="items">
     <div className="w-container">
       <h1 className="heading-decoration">WebServices</h1>
@@ -22,7 +15,6 @@ export const WebServiceList: FC<Props> = ({ webServices }) => (
         {webServices.map((webService) => (
           <WebService
             key={webService.id}
-            id={webService.id}
             name={webService.name}
             serviceUrl={webService.serviceUrl}
             ogpUrl={webService.ogpUrl}

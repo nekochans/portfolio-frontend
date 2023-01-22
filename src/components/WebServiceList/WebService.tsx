@@ -1,14 +1,8 @@
 import type { FC } from 'react';
 import Image from 'next/image';
+import type { WebServiceAttribute } from './WebServiceAttribute';
 
-// TODO 定義が重複しているのでどこかで統一する
-type Props = {
-  id: number;
-  name: string;
-  serviceUrl: string;
-  ogpUrl: string;
-  description: string;
-};
+type Props = WebServiceAttribute;
 
 export const WebService: FC<Props> = ({
   name,

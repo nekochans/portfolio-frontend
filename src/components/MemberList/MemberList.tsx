@@ -1,18 +1,13 @@
 import type { FC } from 'react';
 
 import { Member } from './Member';
+import { MemberAttribute } from './MemberAttribute';
 
-// TODO 定義が重複しているのでどこかで統一する
-export type Props = {
-  members: Array<{
-    id: number;
-    cvUrl: string;
-    githubPicture: string;
-    githubUserName: string;
-  }>;
+export type MemberListProps = {
+  members: Array<MemberAttribute & { id: number }>;
 };
 
-export const MemberList: FC<Props> = ({ members }) => (
+export const MemberList: FC<MemberListProps> = ({ members }) => (
   <section className="items">
     <div className="w-container">
       <h1 className="heading-decoration">Members</h1>

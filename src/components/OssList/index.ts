@@ -1,1 +1,1 @@
-export { OssList } from './OssList';
+export { OssList, type OssListProps } from './OssList';

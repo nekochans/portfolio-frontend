@@ -1,1 +1,1 @@
-export { WebServiceList } from './WebServiceList';
+export { WebServiceList, type WebServiceListProps } from './WebServiceList';

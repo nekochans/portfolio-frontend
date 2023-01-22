@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import type { ComponentStoryObj } from '@storybook/react';
 import { metaTagList } from '../../constants/metaTag';
 import { DefaultLayout } from '../../layouts';
-import { WebServiceList, type Props } from './WebServiceList';
+import { WebServiceList, type WebServiceListProps } from './WebServiceList';
 
 const props = {
   webServices: [
@@ -37,8 +37,9 @@ const props = {
   ],
 };
 
-// TODO https://github.com/RyanClementsHax/storybook-addon-next/issues/72 が解決するまではこのStoryは閲覧出来ないので別途対策を考える
-const WebServiceListWithDefaultLayout: FC<Props> = ({ webServices }) => (
+const WebServiceListWithDefaultLayout: FC<WebServiceListProps> = ({
+  webServices,
+}) => (
   <DefaultLayout metaTag={metaTagList().top}>
     <WebServiceList webServices={webServices} />
   </DefaultLayout>
