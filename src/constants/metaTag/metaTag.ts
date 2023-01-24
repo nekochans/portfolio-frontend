@@ -1,4 +1,4 @@
-import { appUrl, appUrlPath } from './url';
+import { appUrl, appUrlPath } from '../url';
 
 type AppName = 'nekochans';
 
