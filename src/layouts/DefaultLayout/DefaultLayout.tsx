@@ -2,8 +2,7 @@ import type { FC, ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Footer, Header, Hero } from '../../components';
-import { MetaTag } from '../../constants/metaTag';
-import { appUrlPath } from '../../constants/url';
+import { appUrlPath, type MetaTag } from '../../constants';
 
 type Props = {
   children: ReactNode;

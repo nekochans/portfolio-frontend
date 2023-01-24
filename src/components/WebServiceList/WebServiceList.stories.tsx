@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { ComponentStoryObj } from '@storybook/react';
-import { metaTagList } from '../../constants/metaTag';
+import { metaTagList } from '../../constants';
 import { DefaultLayout } from '../../layouts';
 import { WebServiceList, type WebServiceListProps } from './WebServiceList';
 

@@ -5,7 +5,7 @@ import {
   type MemberListProps,
   WebServiceListProps,
 } from '../components';
-import { metaTagList } from '../constants/metaTag';
+import { metaTagList } from '../constants/metaTag/metaTag';
 import { DefaultLayout } from '../layouts';
 
 type Props = MemberListProps & WebServiceListProps;

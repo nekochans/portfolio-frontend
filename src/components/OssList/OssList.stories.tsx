@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import type { ComponentStoryObj } from '@storybook/react';
-import { metaTagList } from '../../constants/metaTag';
+import { metaTagList } from '../../constants';
 import { DefaultLayout } from '../../layouts';
 
 import { OssList, type OssListProps } from './OssList';
